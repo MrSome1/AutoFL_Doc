@@ -1,0 +1,5910 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="http://localhost:8000/fate_component/all/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.11">
+    
+    
+      
+        <title>All - AutoFL</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50e68009.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dataset-source" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AutoFL" class="md-header__button md-logo" aria-label="AutoFL" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AutoFL
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              All
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      首页
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ui_component/" class="md-tabs__link">
+        UI组件
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        FATE组件
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AutoFL" class="md-nav__button md-logo" aria-label="AutoFL" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    AutoFL
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        首页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../ui_component/">UI组件</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="UI组件" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          UI组件
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          数据样本
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数据样本" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          数据样本
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/dataset_source/local/" class="md-nav__link">
+        自有样本
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/dataset_source/remote/" class="md-nav__link">
+        合作方样本
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/dataset_source/federated/" class="md-nav__link">
+        融合样本
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          数据融合
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数据融合" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          数据融合
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/dataset_option/intersection/" class="md-nav__link">
+        求交
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_4">
+          数据预处理
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数据预处理" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          数据预处理
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/preprocess/missiong.md" class="md-nav__link">
+        缺失值
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/preprocess/outlier/" class="md-nav__link">
+        异常值
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/preprocess/standardization/" class="md-nav__link">
+        标准化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/preprocess/normalization/" class="md-nav__link">
+        归一化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/preprocess/encoder/" class="md-nav__link">
+        编码与哑变量
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/preprocess/sampling/" class="md-nav__link">
+        采样
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/preprocess/statistic/" class="md-nav__link">
+        样本分析
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_5">
+          特征分箱
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="特征分箱" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          特征分箱
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/feature_binning/frequency/" class="md-nav__link">
+        等频分箱
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/feature_binning/distance/" class="md-nav__link">
+        等距分箱
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/feature_binning/chi2/" class="md-nav__link">
+        卡方分箱
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_6">
+          特征选择
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="特征选择" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          特征选择
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/feature_selection/pearson/" class="md-nav__link">
+        皮尔逊
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/feature_selection/iv/" class="md-nav__link">
+        IV过滤
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/feature_selection/vif/" class="md-nav__link">
+        VIF过滤
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/feature_selection/variance/" class="md-nav__link">
+        方差过滤
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/feature_selection/embedding/" class="md-nav__link">
+        嵌入法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/feature_selection/packaging/" class="md-nav__link">
+        包装法
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../ui_component/machine_learning/">学习算法</a>
+          
+            <label for="__nav_2_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="学习算法" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          学习算法
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/machine_learning/kmeans/" class="md-nav__link">
+        K-means
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/machine_learning/linear_regression/" class="md-nav__link">
+        线性回归
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/machine_learning/logistic_regression/" class="md-nav__link">
+        逻辑回归
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/machine_learning/poisson/" class="md-nav__link">
+        泊松回归
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/machine_learning/secure_boost/" class="md-nav__link">
+        SecureBoost
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/machine_learning/lightgbm/" class="md-nav__link">
+        LightGBM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/machine_learning/neural_network/" class="md-nav__link">
+        NN
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_8" type="checkbox" id="__nav_2_8" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_8">
+          场景算法
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="场景算法" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          场景算法
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/application/score_card/" class="md-nav__link">
+        评分卡
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_9" type="checkbox" id="__nav_2_9" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_9">
+          模型评估
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="模型评估" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_9">
+          <span class="md-nav__icon md-icon"></span>
+          模型评估
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui_component/machine_learning/evaluation/" class="md-nav__link">
+        模型评估
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">FATE组件</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="FATE组件" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          FATE组件
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataset_source/" class="md-nav__link">
+        数据样本
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataset_option/" class="md-nav__link">
+        数据融合
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_4">
+          数据预处理
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数据预处理" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          数据预处理
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preprocess/dataset_split/" class="md-nav__link">
+        数据集划分
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preprocess/column_expand/" class="md-nav__link">
+        列扩充
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preprocess/imputation/" class="md-nav__link">
+        异常处理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preprocess/scale/" class="md-nav__link">
+        尺度调整
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preprocess/sampling/" class="md-nav__link">
+        样本采样
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preprocess/sample_weight/" class="md-nav__link">
+        样本权重
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preprocess/encoder/" class="md-nav__link">
+        编码
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preprocess/statistics/" class="md-nav__link">
+        数据统计
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../feature_binning/" class="md-nav__link">
+        特征分箱
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../feature_selection/" class="md-nav__link">
+        特征选择
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_7">
+          学习算法
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="学习算法" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          学习算法
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../machine_learning/modeling/" class="md-nav__link">
+        建模方法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../machine_learning/optimizer/" class="md-nav__link">
+        优化算法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../machine_learning/baseline/" class="md-nav__link">
+        基线算法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../machine_learning/linear/" class="md-nav__link">
+        线性模型
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../machine_learning/boosting/" class="md-nav__link">
+        梯度提升树
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../machine_learning/neural_network/" class="md-nav__link">
+        神经网络
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../machine_learning/unsupervised/" class="md-nav__link">
+        非监督学习
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../machine_learning/transfer_learning/" class="md-nav__link">
+        迁移学习
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../application/" class="md-nav__link">
+        场景算法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model_evaluation/" class="md-nav__link">
+        模型评估
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../encryption/" class="md-nav__link">
+        加密算法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mpc/" class="md-nav__link">
+        多方安全计算
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dataset-source" class="md-nav__link">
+    Dataset Source
+  </a>
+  
+    <nav class="md-nav" aria-label="Dataset Source">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#upload" class="md-nav__link">
+    Upload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reader" class="md-nav__link">
+    Reader
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-transform" class="md-nav__link">
+    Data Transform
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasest-option" class="md-nav__link">
+    Datasest Option
+  </a>
+  
+    <nav class="md-nav" aria-label="Datasest Option">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#intersect" class="md-nav__link">
+    Intersect
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#union" class="md-nav__link">
+    Union
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preprocess" class="md-nav__link">
+    Preprocess
+  </a>
+  
+    <nav class="md-nav" aria-label="Preprocess">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-split" class="md-nav__link">
+    Data Split
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Split">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hetero" class="md-nav__link">
+    Hetero
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#homo" class="md-nav__link">
+    Homo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-hot-encoder" class="md-nav__link">
+    One-Hot Encoder
+  </a>
+  
+    <nav class="md-nav" aria-label="One-Hot Encoder">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hetero_1" class="md-nav__link">
+    Hetero
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#homo_1" class="md-nav__link">
+    Homo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-statistics" class="md-nav__link">
+    Data Statistics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#federated-sample" class="md-nav__link">
+    Federated Sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-scale" class="md-nav__link">
+    Feature Scale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-imputation" class="md-nav__link">
+    Feature Imputation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#columnexpand" class="md-nav__link">
+    ColumnExpand
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label-transform" class="md-nav__link">
+    Label Transform
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-weight" class="md-nav__link">
+    Sample Weight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hetero-secure-boost-feature-transformer" class="md-nav__link">
+    Hetero Secure Boost Feature Transformer
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-binning" class="md-nav__link">
+    Feature Binning
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature Binning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hetero-feature-binning" class="md-nav__link">
+    Hetero Feature Binning
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#homo-feature-binning" class="md-nav__link">
+    Homo Feature Binning
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-selection" class="md-nav__link">
+    Feature Selection
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature Selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hetero-feature-selection" class="md-nav__link">
+    Hetero Feature selection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hetero-pearson" class="md-nav__link">
+    Hetero Pearson
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#machine-learning" class="md-nav__link">
+    Machine Learning
+  </a>
+  
+    <nav class="md-nav" aria-label="Machine Learning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#local-baseline" class="md-nav__link">
+    Local BaseLine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hetero-linear-regression" class="md-nav__link">
+    Hetero Linear Regression
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hetero-logistic-regression" class="md-nav__link">
+    Hetero Logistic Regression
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hetero-sshe-lr" class="md-nav__link">
+    Hetero SSHE LR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#homo-logistic-regression" class="md-nav__link">
+    Homo Logistic Regression
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hetero-poisson" class="md-nav__link">
+    Hetero Poisson
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hetero-secure-boost" class="md-nav__link">
+    Hetero Secure Boost
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hetero-fast-secure-boost" class="md-nav__link">
+    Hetero Fast Secure Boost
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#homo-secure-boost" class="md-nav__link">
+    Homo Secure Boost
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hetero-nn" class="md-nav__link">
+    Hetero NN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#homo-nn" class="md-nav__link">
+    Homo NN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hetero-k-means" class="md-nav__link">
+    Hetero K-means
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hetero-federated-transfer-learning" class="md-nav__link">
+    Hetero Federated Transfer Learning
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-evaluation" class="md-nav__link">
+    Model Evaluation
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Evaluation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evaluation" class="md-nav__link">
+    Evaluation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#psi" class="md-nav__link">
+    PSI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application" class="md-nav__link">
+    Application
+  </a>
+  
+    <nav class="md-nav" aria-label="Application">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#score-card" class="md-nav__link">
+    Score Card
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mpc" class="md-nav__link">
+    MPC
+  </a>
+  
+    <nav class="md-nav" aria-label="MPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#secure-information-retrieval" class="md-nav__link">
+    Secure Information Retrieval
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feldman-verifiable-sum" class="md-nav__link">
+    Feldman Verifiable Sum
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other" class="md-nav__link">
+    Other
+  </a>
+  
+    <nav class="md-nav" aria-label="Other">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cross-validation" class="md-nav__link">
+    Cross Validation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hetero-step-wise" class="md-nav__link">
+    Hetero Step Wise
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+  <h1>All</h1>
+
+<h2 id="dataset-source">Dataset Source</h2>
+<h3 id="upload">Upload</h3>
+<p>数据上传，支持dense,sparse,tag value等不同格式</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>file</td>
+<td>文件路径</td>
+<td align="center">str</td>
+<td align="center"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>table_name</td>
+<td>表名</td>
+<td align="center">str</td>
+<td align="center"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>namespace</td>
+<td>表空间</td>
+<td align="center">str</td>
+<td align="center"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>head</td>
+<td>文件是否有头</td>
+<td align="center">int</td>
+<td align="center">1</td>
+<td>1/0</td>
+<td></td>
+</tr>
+<tr>
+<td>partition</td>
+<td>分区数量</td>
+<td align="center">int</td>
+<td align="center">4</td>
+<td>4-100</td>
+<td></td>
+</tr>
+<tr>
+<td>id_delimitor</td>
+<td>分隔符</td>
+<td align="center">str</td>
+<td align="center">','</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>extend_sid</td>
+<td>是否进行id扩展</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>auto_increasing_sid</td>
+<td>扩展的id是否自动递增</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="reader">Reader</h3>
+<h3 id="data-transform">Data Transform</h3>
+<p>对数据集中部分列或全部列，用指定的方法对其进行缺失值和异常值处理(异常值对指定列处理？)</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>input_format</td>
+<td>输入数据集的格式</td>
+<td align="center">str</td>
+<td align="center">"dense"</td>
+<td>"dense", "sparse", "tag"</td>
+<td></td>
+</tr>
+<tr>
+<td>delimiter</td>
+<td>分隔符</td>
+<td align="center">str</td>
+<td align="center">','</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>data_type</td>
+<td>数据类型</td>
+<td align="center">str</td>
+<td align="center">"float64"</td>
+<td>"float", "float64", "int", "int64", "str", "long"</td>
+<td></td>
+</tr>
+<tr>
+<td>exclusive_data_type</td>
+<td>排除的数据类型</td>
+<td align="center">dict</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>tag_with_value</td>
+<td>是否是tag类型的值</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>tag_value_delimitor</td>
+<td>tag value分隔符</td>
+<td align="center">str</td>
+<td align="center">','</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>missing_fill</td>
+<td>是否填充</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>default_value</td>
+<td>默认值</td>
+<td align="center">list</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>missing_fill_method</td>
+<td>填充方法</td>
+<td align="center">str</td>
+<td align="center">None</td>
+<td>None, "min", "max", "mean", "designed"</td>
+<td></td>
+</tr>
+<tr>
+<td>missing_impute</td>
+<td>定义哪个值作为缺失值</td>
+<td align="center">list</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>outlier_replace</td>
+<td>异常值是否需要替换</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>outlier_replace_method</td>
+<td>异常值替换方法</td>
+<td align="center">str</td>
+<td align="center">None</td>
+<td>None, "min", "max", "mean", "designed"</td>
+<td></td>
+</tr>
+<tr>
+<td>outlier_impute</td>
+<td>定义哪个值作为异常值</td>
+<td align="center">list</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>outlier_replace_value</td>
+<td>替换异常值的值</td>
+<td align="center">list</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>with_label</td>
+<td>是否有标签</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>label_name</td>
+<td>标签列名</td>
+<td align="center">str</td>
+<td align="center">'y'</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>label_type</td>
+<td>标签列类型</td>
+<td align="center">?object</td>
+<td align="center">False</td>
+<td>（int,int64,float,float64,long,str）</td>
+<td></td>
+</tr>
+<tr>
+<td>output_format</td>
+<td>输出数据集格式</td>
+<td align="center">str</td>
+<td align="center">"dense"</td>
+<td>"dense", "sparse"</td>
+<td></td>
+</tr>
+<tr>
+<td>with_match_id</td>
+<td>数据集是否有匹配id</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>need_run</td>
+<td>是否需要运行</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="datasest-option">Datasest Option</h2>
+<h3 id="intersect">Intersect</h3>
+<p>纵向样本对齐，支持求交方式为rsa,raw,dh,支持多host，支持只输出key操作</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>intersect_method</td>
+<td>求交方法</td>
+<td align="center">str</td>
+<td align="center">"rsa"</td>
+<td>"rsa", "raw", "dh"</td>
+<td></td>
+</tr>
+<tr>
+<td>random_bit</td>
+<td>随机位数</td>
+<td align="center">int</td>
+<td align="center">128</td>
+<td>128-4096</td>
+<td></td>
+</tr>
+<tr>
+<td>sync_intersect_ids</td>
+<td>是否同步交集id</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>join_role</td>
+<td>参与角色</td>
+<td align="center">str</td>
+<td align="center">"guest"</td>
+<td>"guest", "host"</td>
+<td></td>
+</tr>
+<tr>
+<td>only_output_key</td>
+<td>是否只输出key</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>with_encode</td>
+<td>是否编码</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>encode_param</td>
+<td>编码参数</td>
+<td align="center">EncodeParam</td>
+<td align="center">EncodeParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>raw_params</td>
+<td>raw参数</td>
+<td align="center">RAWParam</td>
+<td align="center">RAWParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>rsa_params</td>
+<td>rsa参数</td>
+<td align="center">RSAParam</td>
+<td align="center">RSAParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>db_params</td>
+<td>db参数</td>
+<td align="center">DBParam</td>
+<td align="center">DBParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>join_method</td>
+<td>连接方式</td>
+<td align="center">str</td>
+<td align="center">"inner_jon"</td>
+<td>"inner_join", "left_join"</td>
+<td></td>
+</tr>
+<tr>
+<td>new_sample_id</td>
+<td>是否生成新的id</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>sample_id_generator</td>
+<td>样本id生成器</td>
+<td align="center">str</td>
+<td align="center">?"gues"</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>intersect_cache_param</td>
+<td>交集缓存参数</td>
+<td align="center">IntersectCacheParam</td>
+<td align="center">IntersectCacheParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>run_cache</td>
+<td>是否存储host方加密的id</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>cardinality_only</td>
+<td>是否仅仅协调</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>sync_cardinality</td>
+<td>是否同步协调</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>run_preprocess</td>
+<td>是否运行预处理</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>intersect_preprocess_params</td>
+<td>交集预处理参数</td>
+<td align="center">IntersectPreProcessParam</td>
+<td align="center">IntersectPreProcessParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>repeated_id_process</td>
+<td>重复id是否处理</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>repeated_id_owner</td>
+<td>谁拥有重复的id</td>
+<td align="center">str</td>
+<td align="center">"guest"</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>allow_info_share</td>
+<td>是否共享信息</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>info_owner</td>
+<td>信息拥有者</td>
+<td align="center">str</td>
+<td align="center">guest</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>with_sample_id</td>
+<td>数据是否含有sample id</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="union">Union</h3>
+<p>对数据进行合并</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>need_run</td>
+<td>是否运行</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>allow_missing</td>
+<td>是否允许有缺失值</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>keep_duplicate</td>
+<td>是否允许有重复值</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="preprocess">Preprocess</h2>
+<h3 id="data-split">Data Split</h3>
+<h4 id="hetero">Hetero</h4>
+<p>将数据集分割为不同的子集，支持指定的区间划分</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>random_state</td>
+<td>随机数种子</td>
+<td align="center">int</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>test_size</td>
+<td>测试集比例</td>
+<td align="center">float/int</td>
+<td align="center">0-1</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>train_size</td>
+<td>训练集比例</td>
+<td align="center">float/int</td>
+<td align="center">0-1</td>
+<td>0.8</td>
+<td></td>
+</tr>
+<tr>
+<td>validate_size</td>
+<td>验证集比例</td>
+<td align="center">float/int</td>
+<td align="center">0-1</td>
+<td>0.2</td>
+<td></td>
+</tr>
+<tr>
+<td>stratified</td>
+<td>是否分层</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>shuffle</td>
+<td>是否排序</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>split_points</td>
+<td>分割点</td>
+<td align="center">list</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>need_run</td>
+<td>是否需要运行</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="homo">Homo</h4>
+<p>同Hetero</p>
+<h3 id="one-hot-encoder">One-Hot Encoder</h3>
+<h4 id="hetero_1">Hetero</h4>
+<h4 id="homo_1">Homo</h4>
+<p>横向onehot编码</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>transform_col_indexes</td>
+<td>需要转换的列索引</td>
+<td align="center">list</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>transform_col_names</td>
+<td>需要转换的列名称</td>
+<td align="center">list</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>need_run</td>
+<td>是否需要运行</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>need_alignment</td>
+<td>是否需要对齐列名</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="data-statistics">Data Statistics</h3>
+<p>对部分或所有特征进行概要或描述性统计分析，count,sum,mean,standard_deviation,median,min,max,missing_count,skewness,kurtosis</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>statistics</td>
+<td>分析指标</td>
+<td align="center">?list,string</td>
+<td align="center">summary sum(summary), mean(summary,describe), standard_deviation(summary,describe), median(summary), min(summary,describe), max(summary,describe), missing_count(summary), skewness(summary), kurtosis(summary), count(describe)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>column_names</td>
+<td>需要进行分析的列名</td>
+<td align="center">list/string</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>column_indexes</td>
+<td>需要进行分析的列索引</td>
+<td align="center">list/int</td>
+<td align="center">-1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>bias</td>
+<td>是否有偏差</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>need_run</td>
+<td>是否需要运行</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="federated-sample">Federated Sample</h3>
+<p>样本采样</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mode</td>
+<td>采样模式</td>
+<td align="center">str</td>
+<td align="center">"random"</td>
+<td>"random", "stratified"</td>
+<td></td>
+</tr>
+<tr>
+<td>method</td>
+<td>采样方法</td>
+<td align="center">str</td>
+<td align="center">"downsample"</td>
+<td>"downsample", "upsample"</td>
+<td></td>
+</tr>
+<tr>
+<td>fractions</td>
+<td>?采样比例</td>
+<td align="center">float/int</td>
+<td align="center">None</td>
+<td></td>
+<td>如果mode="random"，fractions=06,如果mode="stratified",fractions=[[0,1.5],[1.2.0]]</td>
+</tr>
+<tr>
+<td>random_state</td>
+<td>随机数种子</td>
+<td align="center">int</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>need_run</td>
+<td>是否需要运行</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="feature-scale">Feature Scale</h3>
+<p>对数据集中部分列或所有列进行归一化处理，标准差和最大最小值归一化</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>method</td>
+<td>标准化方法</td>
+<td align="center">str</td>
+<td align="center"></td>
+<td>"standard_scale", "standard_scale", "min_max_scale"</td>
+<td></td>
+</tr>
+<tr>
+<td>mode</td>
+<td>处理模式</td>
+<td align="center">str</td>
+<td align="center">"normal"</td>
+<td>"normal", "cap"</td>
+<td></td>
+</tr>
+<tr>
+<td>feat_upper</td>
+<td>特征值上界</td>
+<td align="center">int/float/list</td>
+<td align="center">None</td>
+<td></td>
+<td>该参数只针对min_max_scale方法有效</td>
+</tr>
+<tr>
+<td>feat_lower</td>
+<td>特征值下界</td>
+<td align="center">int/float/list</td>
+<td align="center">None</td>
+<td>该参数只针对min_max_scale方法有效</td>
+<td></td>
+</tr>
+<tr>
+<td>scale_col_indexes</td>
+<td>索引列</td>
+<td align="center">?list</td>
+<td align="center">-1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>scale_names</td>
+<td>列名</td>
+<td align="center">list</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>with_mean</td>
+<td>是否计算平均值，用作标准化处理</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>with_std</td>
+<td>是否计算标准差，用于标准化处理</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>need_run</td>
+<td>是否需要运行</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="feature-imputation">Feature Imputation</h3>
+<p>用指定的方法或值对部分或全部缺失值的列进行填充处理(需要此方法)</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>default_value</td>
+<td>用指定的值替换默认值</td>
+<td align="center">?Object/list</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>missing_fill_method</td>
+<td>填充方法</td>
+<td align="center">str</td>
+<td align="center">None</td>
+<td>None, "min", "max", "mean", "designated"</td>
+<td></td>
+</tr>
+<tr>
+<td>col_missing_fill_method</td>
+<td>列填充方法</td>
+<td align="center">dict</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>missing_impute</td>
+<td>定义哪个值作为默认值</td>
+<td align="center">list</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>need_run</td>
+<td>是否需要运行</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="columnexpand">ColumnExpand</h3>
+<h3 id="label-transform">Label Transform</h3>
+<p>label 转换，支持编码转换</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>label_encoder</td>
+<td>标签编码</td>
+<td align="center">list</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>label_list</td>
+<td>标签列表</td>
+<td align="center">list</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>need_run</td>
+<td>是否需要运行</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="sample-weight">Sample Weight</h3>
+<p>支持对类标签（y）赋予指定的权重，支持多host</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>class_weight</td>
+<td>类权重</td>
+<td align="center">str/dict</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>sample_weight_name</td>
+<td>样本权重名称</td>
+<td align="center">str</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>normalize</td>
+<td>对样本权重列是否需要进行标准化</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>need_run</td>
+<td>是否需要运行</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="hetero-secure-boost-feature-transformer">Hetero Secure Boost Feature Transformer</h3>
+<h2 id="feature-binning">Feature Binning</h2>
+<h3 id="hetero-feature-binning">Hetero Feature Binning</h3>
+<p>纵向特征分箱，基于分位数，多分类多host,chi-square,iv,ks,gini,woe分箱</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>method</td>
+<td>分箱方法</td>
+<td align="center">str</td>
+<td align="center">"quantile"</td>
+<td>"optimal", "bucket", "quantile"</td>
+<td>分别为: 卡方分箱, 等距分箱, 等频分箱</td>
+</tr>
+<tr>
+<td>compress_thres</td>
+<td>压缩阈值</td>
+<td align="center">int</td>
+<td align="center">10000</td>
+<td>5000 ~ 样本大小</td>
+<td></td>
+</tr>
+<tr>
+<td>head_size</td>
+<td>头大小</td>
+<td align="center">int</td>
+<td align="center">10000</td>
+<td>5000 ~ 样本大小</td>
+<td></td>
+</tr>
+<tr>
+<td>error</td>
+<td>分箱容忍的错误</td>
+<td align="center">float</td>
+<td align="center">0.001</td>
+<td>0 ~ 0.001</td>
+<td></td>
+</tr>
+<tr>
+<td>bin_num</td>
+<td>分箱数量</td>
+<td align="center">int</td>
+<td align="center">10</td>
+<td>2 ~ 100</td>
+<td></td>
+</tr>
+<tr>
+<td>bin_indexes</td>
+<td>分箱列的索引</td>
+<td align="center">int</td>
+<td align="center">-1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>bin_names</td>
+<td>分箱列名称</td>
+<td align="center">str/list</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>category_indexes</td>
+<td>离散型列索引</td>
+<td align="center">int/list</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>category_names</td>
+<td>离散型列名称</td>
+<td align="center">str/list</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>adjustment_factor</td>
+<td>调整因子</td>
+<td align="center">float</td>
+<td align="center">0.5</td>
+<td>0.1 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>local_only</td>
+<td>是否只是本方进行分箱</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>transform_param</td>
+<td>转换参数</td>
+<td align="center">?TransformParam</td>
+<td align="center">TransformParam</td>
+<td>bin_num, woe, None</td>
+<td></td>
+</tr>
+<tr>
+<td>optimal_binning_param</td>
+<td>优化分箱参数</td>
+<td align="center">?OptimalBinningParam</td>
+<td align="center">OptimalBinningParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>encrypt_param</td>
+<td>加密参数</td>
+<td align="center">?EncryptParam</td>
+<td align="center">EncryptParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>need_run</td>
+<td>是否需要运行</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>skip_static</td>
+<td>iv,woe计算是否忽略</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="homo-feature-binning">Homo Feature Binning</h3>
+<p>横向对部分列或所有列进行特征分箱</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>method</td>
+<td>分箱方式</td>
+<td align="center">str</td>
+<td align="center">?"virtual_summary"</td>
+<td>"optimal", "bucket", "quantile"</td>
+<td>分别为: 卡方分箱, 等距分箱, 等频分箱</td>
+</tr>
+<tr>
+<td>compress_thres</td>
+<td>压缩阈值</td>
+<td align="center">int</td>
+<td align="center">10000</td>
+<td>5000 ~ 样本大小</td>
+<td></td>
+</tr>
+<tr>
+<td>head_size</td>
+<td>头大小</td>
+<td align="center">int</td>
+<td align="center">10000</td>
+<td>5000 ~ 样本大小</td>
+<td></td>
+</tr>
+<tr>
+<td>error</td>
+<td>分箱容忍的错误</td>
+<td align="center">float</td>
+<td align="center">0.001</td>
+<td>?0 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>sample_bins</td>
+<td>样本分箱数量</td>
+<td align="center">int</td>
+<td align="center">100</td>
+<td>10 ~ 1000</td>
+<td></td>
+</tr>
+<tr>
+<td>bin_num</td>
+<td>分箱数量</td>
+<td align="center">int</td>
+<td align="center">10</td>
+<td>3 ~ 100</td>
+<td></td>
+</tr>
+<tr>
+<td>bin_indexes</td>
+<td>分箱列索引</td>
+<td align="center">int</td>
+<td align="center">-1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>bin_names</td>
+<td>分箱列名称</td>
+<td align="center">str</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>adjustment_factor</td>
+<td>调整因子</td>
+<td align="center">float</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>transform_param</td>
+<td>转换参数</td>
+<td align="center">?TransformParam</td>
+<td align="center">TransformParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>category_indexes</td>
+<td>离散型索引</td>
+<td align="center">int</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>category_names</td>
+<td>离散型名称</td>
+<td align="center">str</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>need_run</td>
+<td>是否需要运行</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>skip_static</td>
+<td>是否需要忽略统计</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>max_iter</td>
+<td>最大迭代次数</td>
+<td align="center">int</td>
+<td align="center">100</td>
+<td>5 ~ 100</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="feature-selection">Feature Selection</h2>
+<h3 id="hetero-feature-selection">Hetero Feature selection</h3>
+<p>基于iv,pearson,vif对指标进行选择，支持多host,多分类，部分列或所有列</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>select_col_indexes</td>
+<td>选择的列索引</td>
+<td align="center">list/int</td>
+<td align="center">-1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>select_names 选择的列名称</td>
+<td>list/string</td>
+<td align="center">[]</td>
+<td align="center"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>filter_methods</td>
+<td>选择过滤方式</td>
+<td align="center">?list</td>
+<td align="center">"manually"</td>
+<td>manually(), iv_filter, statistic_filter, psi_filter, hetero_sbt_filter, home_sbt_filter, hetero_fast_sbt_filter, percentage_value, vif_filter, correlation_filter</td>
+<td></td>
+</tr>
+<tr>
+<td>unique_param</td>
+<td>唯一值参数</td>
+<td align="center">?UniqueValueParam</td>
+<td align="center">UniqueValueParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>iv_top_k_param</td>
+<td>ivtopk参数</td>
+<td align="center">?IVTopKParam</td>
+<td align="center">IVTopKParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>iv_value_param</td>
+<td>iv值参数</td>
+<td align="center">?IVValueSelectionParam</td>
+<td align="center">IVValueSelectionParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>iv_percentile_param</td>
+<td>iv百分比参数</td>
+<td align="center">?IVPercentileSectionParam</td>
+<td align="center">IVPercentileParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>variance_coe_param</td>
+<td>方差相关系数</td>
+<td align="center">?VarianceOfCoeSelectionParam</td>
+<td align="center">VarianceOfCoeSelectionParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>outlier_param</td>
+<td>异常值参数</td>
+<td align="center">?OutlierColsSelectionParam</td>
+<td align="center">OutlierColsSelectionParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>manually_param</td>
+<td>手动参数</td>
+<td align="center">?ManuallyFilterParam</td>
+<td align="center">ManuallyParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>percentage_value_param</td>
+<td>百分比参数</td>
+<td align="center">?PercentageValueParam</td>
+<td align="center">PercentageValueParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>iv_param</td>
+<td>iv参数</td>
+<td align="center">?CommonFilterParam</td>
+<td align="center">CommonFilterParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>statistic_param</td>
+<td>统计参数</td>
+<td align="center">CommonFilterParam</td>
+<td align="center">CommonFilterParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>psi_param</td>
+<td>psi参数</td>
+<td align="center">?CommonFilterParam</td>
+<td align="center">CommonFilterParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>vif_param</td>
+<td>vif参数</td>
+<td align="center">?CommonFilterParam</td>
+<td align="center">CommonFilterParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>sbt_param</td>
+<td>sbt参数</td>
+<td align="center">?CommonFilterParam</td>
+<td align="center">CommonFilterParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>correlation_param</td>
+<td>相关性参数</td>
+<td align="center">?CorrelationFilterParam</td>
+<td align="center">CorrelationFilterParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>need_run</td>
+<td>是否需要运行</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="hetero-pearson">Hetero Pearson</h3>
+<p>纵向pearson,支持only host</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>column_names</td>
+<td>列名</td>
+<td align="center">str/list</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>column_indexes</td>
+<td>列索引</td>
+<td align="center">list</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>cross_parties</td>
+<td>跨方</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>use_mix_rand</td>
+<td>是否使用混合</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>calc_local_vif</td>
+<td>计算本地vif</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>need_run</td>
+<td>是否需要运行</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="machine-learning">Machine Learning</h2>
+<h3 id="local-baseline">Local BaseLine</h3>
+<h3 id="hetero-linear-regression">Hetero Linear Regression</h3>
+<p>纵向线性回归，支持交叉和多host进行联邦</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>penalty</td>
+<td>惩罚方式</td>
+<td align="center">string</td>
+<td align="center">"L2"</td>
+<td>"L1", "L2"</td>
+<td>?L1不支持</td>
+</tr>
+<tr>
+<td>tol</td>
+<td>收敛阈值</td>
+<td align="center">float</td>
+<td align="center">1.00E-04</td>
+<td>0 ~ 0.0001</td>
+<td></td>
+</tr>
+<tr>
+<td>alpha</td>
+<td>alpha系数</td>
+<td align="center">float</td>
+<td align="center">1</td>
+<td>0.1 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>optimizer</td>
+<td>优化方式</td>
+<td align="center">str</td>
+<td align="center">"sgd"</td>
+<td>"sgd", "rmsprop", "adam", "sqn", "adagrad"</td>
+<td></td>
+</tr>
+<tr>
+<td>batch_size</td>
+<td>批处理大小</td>
+<td align="center">int</td>
+<td align="center">-1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>learning_rate</td>
+<td>学习率</td>
+<td align="center">float</td>
+<td align="center">0.01</td>
+<td>0.01 ~ 0.1</td>
+<td></td>
+</tr>
+<tr>
+<td>max_iter</td>
+<td>最大迭代次数</td>
+<td align="center">int</td>
+<td align="center">20</td>
+<td>2 ~ 100</td>
+<td></td>
+</tr>
+<tr>
+<td>?init_param</td>
+<td>初始化参数</td>
+<td align="center">InitParam</td>
+<td align="center">InitParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?predict_param</td>
+<td>预测参数</td>
+<td align="center">PredictParam</td>
+<td align="center">PredictParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?encrypt_param</td>
+<td>加密参数</td>
+<td align="center">EncryptParam</td>
+<td align="center">EncryptParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?encrypted_mode_calculator_param</td>
+<td>加密模式计算参数</td>
+<td align="center">EncryptedModeCalculatorParam</td>
+<td align="center">EncryptedModeCalculatorParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?cv_param</td>
+<td>交叉验证参数</td>
+<td align="center">CrossValidationParam</td>
+<td align="center">CrossValidationParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>decay</td>
+<td>衰减率</td>
+<td align="center">int/float</td>
+<td align="center">1</td>
+<td>0.1 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>decay_sqrt</td>
+<td>衰减率是否进行平方根</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>validation_freqs</td>
+<td>验证频率</td>
+<td align="center">int/list</td>
+<td align="center">1</td>
+<td>1 ~ 100</td>
+<td></td>
+</tr>
+<tr>
+<td>early_stopping_rounds</td>
+<td>第几轮进行早停</td>
+<td align="center">int</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>metrics</td>
+<td>评价指标</td>
+<td align="center">list</td>
+<td align="center">None</td>
+<td>? "root_mean_squared_error", "mean_absolute_error"</td>
+<td></td>
+</tr>
+<tr>
+<td>use_first_metric_only</td>
+<td>是否将第一个指标作为评判标准</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>floating_point_precision</td>
+<td>浮点数精确位数</td>
+<td align="center">int</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?callback_param</td>
+<td>回调参数</td>
+<td align="center">CallbackParam</td>
+<td align="center">CallbackParam</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="hetero-logistic-regression">Hetero Logistic Regression</h3>
+<p>纵向逻辑回归，支持交叉验证，早停，特征工程，多host，多分类的模型</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>penalty</td>
+<td>惩罚方式</td>
+<td align="center">str</td>
+<td align="center">"L2"</td>
+<td>"L2", "L1"</td>
+<td>?L1不支持</td>
+</tr>
+<tr>
+<td>optimizer</td>
+<td>优化方式</td>
+<td align="center">string</td>
+<td align="center">"rmsprop"</td>
+<td>"rmsprop", "sgd", "adam", "nesterov_momentum_sgd", "sqn", "adagrad"</td>
+<td></td>
+</tr>
+<tr>
+<td>tol</td>
+<td>收敛阈值</td>
+<td align="center">float</td>
+<td align="center">1.00E-04</td>
+<td>0 ~ 0.0001</td>
+<td></td>
+</tr>
+<tr>
+<td>alpha</td>
+<td>正则系数</td>
+<td align="center">float</td>
+<td align="center">1</td>
+<td>0.1 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>max_iter</td>
+<td>最大迭代次数</td>
+<td align="center">int</td>
+<td align="center">100</td>
+<td>2 ~ 100</td>
+<td></td>
+</tr>
+<tr>
+<td>early_stop</td>
+<td>早停方式判断收敛</td>
+<td align="center">str</td>
+<td align="center">"diff"</td>
+<td>"diff", "abs", "weight_diff"</td>
+<td></td>
+</tr>
+<tr>
+<td>?encrypt_param</td>
+<td>加密参数</td>
+<td align="center">EncryptParam</td>
+<td align="center">EncryptParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?encrypted_model_calculator_param</td>
+<td>加密模式计算参数</td>
+<td align="center">EncryptedModeCalculatorParam</td>
+<td align="center">EncryptedModeCalculatorParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?predict_param</td>
+<td>预测参数</td>
+<td align="center">PredictParam</td>
+<td align="center">PredictParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>batch_size</td>
+<td>每一轮训练样本大小</td>
+<td align="center">int</td>
+<td align="center">-1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>learning_rate</td>
+<td>学习率</td>
+<td align="center">float</td>
+<td align="center">0.01</td>
+<td>0 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>decay</td>
+<td>衰减率</td>
+<td align="center">float</td>
+<td align="center">1</td>
+<td>0 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>decay_sqrt</td>
+<td>衰减率是否需要进行平方根</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>multi_class</td>
+<td>多分类</td>
+<td align="center">string</td>
+<td align="center">"ovr"</td>
+<td>?</td>
+<td></td>
+</tr>
+<tr>
+<td>?init_param</td>
+<td>初始化参数</td>
+<td align="center">InitParam</td>
+<td align="center">InitParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?sqn_param</td>
+<td>sqn参数</td>
+<td align="center">StochasticQuasiNewtonParam</td>
+<td align="center">梯度下降牛顿法参数</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>early_stopping_rounds</td>
+<td>第几轮进行早停</td>
+<td align="center">int</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>validation_freqs</td>
+<td>验证频率</td>
+<td align="center">int</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?cv_param</td>
+<td>交叉验证参数</td>
+<td align="center">CrossValidationParam</td>
+<td align="center">CrossValidationParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>metrics</td>
+<td>评价指标</td>
+<td align="center">string/list</td>
+<td align="center">None</td>
+<td>'auc','ks'</td>
+<td></td>
+</tr>
+<tr>
+<td>floating_point_precision</td>
+<td>浮点数精确位数</td>
+<td align="center">float</td>
+<td align="center">23</td>
+<td>23</td>
+<td></td>
+</tr>
+<tr>
+<td>use_first_metric_only</td>
+<td>是否将第一个指标作为评判标准</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?stepwise_param</td>
+<td>特征选择参数</td>
+<td align="center">StepwiseParam</td>
+<td align="center">StepwiseParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?callback_param</td>
+<td>回调参数</td>
+<td align="center">CallbackParam</td>
+<td align="center">CallbackParam</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="hetero-sshe-lr">Hetero SSHE LR</h3>
+<p>纵向sshe逻辑回归，支持正则项，交叉，多分类</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>penalty</td>
+<td>惩罚方式</td>
+<td align="center">str</td>
+<td align="center">None</td>
+<td>"L2", "L1"</td>
+<td></td>
+</tr>
+<tr>
+<td>tol</td>
+<td>收敛阈值</td>
+<td align="center">float</td>
+<td align="center">1.00E-04</td>
+<td>0 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>alpha</td>
+<td>正则系数</td>
+<td align="center">float</td>
+<td align="center">1</td>
+<td>0 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>optimizer</td>
+<td>优化器</td>
+<td align="center">str</td>
+<td align="center">"sgd"</td>
+<td>"sgd", "rmsprop", "adam", "nesterov_momentum_sgd", "adagrad"</td>
+<td></td>
+</tr>
+<tr>
+<td>batch_size</td>
+<td>每一轮训练样本大小</td>
+<td align="center">int</td>
+<td align="center">-1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>learning_rate</td>
+<td>学习率</td>
+<td align="center">float</td>
+<td align="center">0.01</td>
+<td>0 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>max_iter</td>
+<td>最大迭代次数</td>
+<td align="center">int</td>
+<td align="center">100</td>
+<td>5 ~ 100</td>
+<td></td>
+</tr>
+<tr>
+<td>early_stop</td>
+<td>早停判断标准</td>
+<td align="center">str</td>
+<td align="center">"diff"</td>
+<td>"diff", "abs", "weight_diff"</td>
+<td></td>
+</tr>
+<tr>
+<td>decay</td>
+<td>衰减率</td>
+<td align="center">float</td>
+<td align="center">1</td>
+<td>0 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>decay_sqrt</td>
+<td>衰减率是否进行平方根</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?encrypt_param</td>
+<td>加密参数</td>
+<td align="center">EncryptParam</td>
+<td align="center">EncryptParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?predict_param</td>
+<td>预测参数</td>
+<td align="center">PredictParam</td>
+<td align="center">PredictParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?cv_param</td>
+<td>交叉验证参数</td>
+<td align="center">CrossValidationParam</td>
+<td align="center">CrossValidationParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>multi_class</td>
+<td>多分类</td>
+<td align="center">str</td>
+<td align="center">"ovr"</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>reveal_strategy</td>
+<td>泄露策略</td>
+<td align="center">str</td>
+<td align="center">"respectively"</td>
+<td>"respectively", "encrypted_reveal_in_host"</td>
+<td></td>
+</tr>
+<tr>
+<td>use_mix_rand</td>
+<td>是否使用混合</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?callback_param</td>
+<td>回调参数</td>
+<td align="center">CallbackParam</td>
+<td align="center">CallbackParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>reveal_every_iter</td>
+<td>是否每次迭代都泄露</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="homo-logistic-regression">Homo Logistic Regression</h3>
+<p>横向逻辑回归，支持交叉，多host</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>penalty</td>
+<td>惩罚方式</td>
+<td align="center">str</td>
+<td align="center">"L2"</td>
+<td>"L2", "L1"</td>
+<td>?L1不支持</td>
+</tr>
+<tr>
+<td>tol</td>
+<td>收敛阈值</td>
+<td align="center">float</td>
+<td align="center">1.00E-04</td>
+<td>0 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>alpha</td>
+<td>正则系数</td>
+<td align="center">float</td>
+<td align="center">1</td>
+<td>0.1 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>optimizer</td>
+<td>优化器</td>
+<td align="center">str</td>
+<td align="center">"rmsprop"</td>
+<td>?</td>
+<td></td>
+</tr>
+<tr>
+<td>batch_size</td>
+<td>每一轮训练样本大小</td>
+<td align="center">int</td>
+<td align="center">-1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>learning_rate</td>
+<td>学习率</td>
+<td align="center">float</td>
+<td align="center">0.01</td>
+<td>0 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>?init_param</td>
+<td>初始化参数</td>
+<td align="center">InitParam</td>
+<td align="center">InitParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>max_iter</td>
+<td>最大迭代次数</td>
+<td align="center">int</td>
+<td align="center">100</td>
+<td>2 ~ 100</td>
+<td></td>
+</tr>
+<tr>
+<td>early_stop</td>
+<td>早停判断标准</td>
+<td align="center">str</td>
+<td align="center">"diff"</td>
+<td>"diff", "abs", "weight_diff"</td>
+<td></td>
+</tr>
+<tr>
+<td>?encrypt_param</td>
+<td>加密参数</td>
+<td align="center">EncryptParam</td>
+<td align="center">EncryptParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>re_encrypt_batches</td>
+<td>重新加密的轮次</td>
+<td align="center">int</td>
+<td align="center">2</td>
+<td>2 ~ 100</td>
+<td></td>
+</tr>
+<tr>
+<td>?predict_param</td>
+<td>预测参数</td>
+<td align="center">PredictParam</td>
+<td align="center">PredictParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?cv_param</td>
+<td>交叉验证参数</td>
+<td align="center">CrossValidationParam</td>
+<td align="center">CrossValidationParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>decay</td>
+<td>衰减率</td>
+<td align="center">float</td>
+<td align="center">1</td>
+<td>0 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>decay_sqrt</td>
+<td>衰减率是否平方根</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>aggregate_iters</td>
+<td>聚集的轮次</td>
+<td align="center">int</td>
+<td align="center">1</td>
+<td>1 ~ 100</td>
+<td></td>
+</tr>
+<tr>
+<td>multi_class</td>
+<td>多分类</td>
+<td align="center">str</td>
+<td align="center">"ovr"</td>
+<td>?</td>
+<td></td>
+</tr>
+<tr>
+<td>validation_freqs</td>
+<td>验证频率</td>
+<td align="center">int</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>early_stopping_rounds</td>
+<td>第几轮进行早停</td>
+<td align="center">int</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>metrics</td>
+<td>评价指标</td>
+<td align="center">str/list</td>
+<td align="center">?</td>
+<td>'auc','ks'</td>
+<td></td>
+</tr>
+<tr>
+<td>use_first_metric_only</td>
+<td>是否用第一个指标作为评判标准</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>use_proximal</td>
+<td>是否用多项式</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>mu</td>
+<td>对多项式项进行归一化系数</td>
+<td align="center">float</td>
+<td align="center">0.1</td>
+<td>0 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>?call_back_param</td>
+<td>回调参数</td>
+<td align="center">CallbackParam</td>
+<td align="center">CallbackParam</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="hetero-poisson">Hetero Poisson</h3>
+<p>纵向poisson，支持交叉</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>penalty</td>
+<td>惩罚方式</td>
+<td align="center">str</td>
+<td align="center">"L2"</td>
+<td>"L2", "L1"</td>
+<td>?L1不支持</td>
+</tr>
+<tr>
+<td>tol</td>
+<td>收敛阈值</td>
+<td align="center">float</td>
+<td align="center">1.00E-04</td>
+<td>0 ~ 0.0001</td>
+<td></td>
+</tr>
+<tr>
+<td>alpha</td>
+<td>正则系数</td>
+<td align="center">float</td>
+<td align="center">1</td>
+<td>0.1 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>optimizer</td>
+<td>优化器</td>
+<td align="center">str</td>
+<td align="center">"resprop"</td>
+<td>"rmsprop", "sgd", "adam", "adagrad"</td>
+<td></td>
+</tr>
+<tr>
+<td>batch_size</td>
+<td>每一轮训练样本大小</td>
+<td align="center">int</td>
+<td align="center">-1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>learning_rate</td>
+<td>学习率</td>
+<td align="center">float</td>
+<td align="center">0.01</td>
+<td>0 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>max_iter</td>
+<td>最大迭代次数</td>
+<td align="center">int</td>
+<td align="center">100</td>
+<td>5 ~ 100</td>
+<td></td>
+</tr>
+<tr>
+<td>?init_param</td>
+<td>初始化参数</td>
+<td align="center">InitParam</td>
+<td align="center">InitParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>early_stop</td>
+<td>早停方式判断收敛</td>
+<td align="center">str</td>
+<td align="center">"diff"</td>
+<td>"diff", "abs", "weight_diff"</td>
+<td></td>
+</tr>
+<tr>
+<td>exposure_columns</td>
+<td>暴露列名</td>
+<td align="center">str</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?predict_param</td>
+<td>预测参数</td>
+<td align="center">PredictParam</td>
+<td align="center">PredictParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?encrypt_param</td>
+<td>加密参数</td>
+<td align="center">EncryptParam</td>
+<td align="center">EncryptParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?encrypted_mode_calculator_param</td>
+<td>加密模式计算参数</td>
+<td align="center">EncryptedModeCalculatorParam</td>
+<td align="center">EncryptedModeCalculatorParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?cv_param</td>
+<td>交叉验证参数</td>
+<td align="center">CrossValidationParam</td>
+<td align="center">CrossValidationParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?stepwise_param</td>
+<td>特征选择参数</td>
+<td align="center">StepwiseParam</td>
+<td align="center">~</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>decay</td>
+<td>衰减率</td>
+<td align="center">float</td>
+<td align="center">1</td>
+<td>0 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>decay_sqrt</td>
+<td>衰减率是否需要平方根</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>validation_freqs</td>
+<td>验证频率</td>
+<td align="center">int</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>early_stopping_rounds</td>
+<td>第几轮进行早停</td>
+<td align="center">int</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>metrics</td>
+<td>评价指标</td>
+<td align="center">str/list</td>
+<td align="center">None</td>
+<td>"root_mean_squared_error", "mean_absolute_error"</td>
+<td></td>
+</tr>
+<tr>
+<td>use_first_metric_only</td>
+<td>是否用第一个指标作为评判标准</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>floating_point_precision</td>
+<td>浮点数精确位数</td>
+<td align="center">None/int</td>
+<td align="center">23</td>
+<td>23</td>
+<td></td>
+</tr>
+<tr>
+<td>?callback_param</td>
+<td>回调参数</td>
+<td align="center">CallbackParam</td>
+<td align="center">CallbackParam</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="hetero-secure-boost">Hetero Secure Boost</h3>
+<p>纵向secureboost tree,支持二分类，多分类，回归等，多host</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>task_type</td>
+<td>任务类型</td>
+<td align="center">str</td>
+<td align="center">?</td>
+<td>"classification", "regression"</td>
+<td></td>
+</tr>
+<tr>
+<td>?tree_param</td>
+<td>树参数</td>
+<td align="center">DecistionTreeParam</td>
+<td align="center">DecisionTreeParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?objective_param</td>
+<td>目标参数</td>
+<td align="center">ObjectiveParam</td>
+<td align="center">ObjectiveParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>tol</td>
+<td>收敛标准</td>
+<td align="center">float</td>
+<td align="center">0-1</td>
+<td>0.0001</td>
+<td></td>
+</tr>
+<tr>
+<td>learning_rate</td>
+<td>学习率</td>
+<td align="center">float/int/long</td>
+<td align="center">0.3</td>
+<td>0 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>num_trees</td>
+<td>树数量</td>
+<td align="center">int</td>
+<td align="center">5</td>
+<td>3 ~ 1000</td>
+<td></td>
+</tr>
+<tr>
+<td>subsample_feature_rate</td>
+<td>样本采样比例</td>
+<td align="center">float</td>
+<td align="center">1</td>
+<td>0 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>random_seed</td>
+<td>随机数种子</td>
+<td align="center">int</td>
+<td align="center">100</td>
+<td>10 ~ 1000</td>
+<td></td>
+</tr>
+<tr>
+<td>n_iter_no_change</td>
+<td>n次迭代是否没有变化</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?encrypt_param</td>
+<td>加密参数</td>
+<td align="center">EncryptParam</td>
+<td align="center">EncryptParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>bin_num</td>
+<td>分箱数量</td>
+<td align="center">int</td>
+<td align="center">32</td>
+<td>4 ~ 100</td>
+<td></td>
+</tr>
+<tr>
+<td>?encrypted_mode_calculator_param</td>
+<td>加密模式计算参数</td>
+<td align="center">EncryptedModeCalculatorParam</td>
+<td align="center">EncryptedModeCalculatorParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>use_missing</td>
+<td>是否使用缺失值</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>zero_as_missing</td>
+<td>0是否作为缺失值</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>validation_freqs</td>
+<td>验证频率</td>
+<td align="center">int</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>early_stopping_rounds</td>
+<td>第几轮进行早停</td>
+<td align="center">int</td>
+<td align="center">None</td>
+<td>?页面不需要</td>
+<td></td>
+</tr>
+<tr>
+<td>metrics</td>
+<td>评价指标</td>
+<td align="center">str</td>
+<td align="center">None</td>
+<td>"regression", "root_mean_squared_error", "mean_absolute_error", "binary-classification", "auc", "ks", "multi-classification", "accuracy", "precision", "recall"</td>
+<td></td>
+</tr>
+<tr>
+<td>use_first_metric_only</td>
+<td>是否用第一个指标作为评判标准</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>complete_secure</td>
+<td>是否完全安全</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>sparse_optimization</td>
+<td>是否对稀疏数据进行优化</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>run_goss</td>
+<td>是否进行单边采样</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>top_rate</td>
+<td>最大比例</td>
+<td align="center">float</td>
+<td align="center">0.2</td>
+<td>0 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>other_rate</td>
+<td>其他比例</td>
+<td align="center">float</td>
+<td align="center">0.1</td>
+<td>0 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>cipher_compress_error</td>
+<td>密文压缩错误</td>
+<td align="center">None</td>
+<td align="center">None</td>
+<td>abandoned</td>
+<td></td>
+</tr>
+<tr>
+<td>new_ver</td>
+<td>bool</td>
+<td align="center">True</td>
+<td align="center"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?call_back_param</td>
+<td>回调参数</td>
+<td align="center">CallbackParam</td>
+<td align="center">CallbackParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>cipher_compress</td>
+<td>是否对密文进行压缩</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="hetero-fast-secure-boost">Hetero Fast Secure Boost</h3>
+<p>纵向secureboost tree联邦学习可以进行分类/多分类/回归</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>task_type</td>
+<td>任务类型</td>
+<td align="center">string</td>
+<td align="center">"classification"</td>
+<td>"classification", "regression"</td>
+<td></td>
+</tr>
+<tr>
+<td>?tree_param</td>
+<td>树参数</td>
+<td align="center">DecistionTreeParam</td>
+<td align="center">DecistionTreeParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?objective_param</td>
+<td>目标参数</td>
+<td align="center">ObjectiveParam</td>
+<td align="center">ObjectiveParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>learning_rate</td>
+<td>学习率</td>
+<td align="center">float</td>
+<td align="center">0.3</td>
+<td>0.1 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>num_trees</td>
+<td>树数量</td>
+<td align="center">int</td>
+<td align="center">5</td>
+<td>3 ~ 1000</td>
+<td></td>
+</tr>
+<tr>
+<td>subsample_feature_rate</td>
+<td>样本采样比例</td>
+<td align="center">int</td>
+<td align="center">1</td>
+<td>0.1 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>tol</td>
+<td>损失大小</td>
+<td align="center">float</td>
+<td align="center">0.0001</td>
+<td>0 ~ 0.0001</td>
+<td></td>
+</tr>
+<tr>
+<td>n_iter_no_change</td>
+<td>迭代是否没有变化</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?encrypt_param</td>
+<td>加密参数</td>
+<td align="center">EncryptParam</td>
+<td align="center">~</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>bin_num</td>
+<td>分箱数量</td>
+<td align="center">int</td>
+<td align="center">32</td>
+<td>3 ~ 100</td>
+<td></td>
+</tr>
+<tr>
+<td>?encrypted_model_calculator_param</td>
+<td>加密模式计算参数</td>
+<td align="center">EncryptedModeCalculatorParam</td>
+<td align="center">~</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?predict_param</td>
+<td>预测参数</td>
+<td align="center">Predict_Param</td>
+<td align="center">~</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?cv_param</td>
+<td>交叉验证参数</td>
+<td align="center">CrossValidationParam</td>
+<td align="center">~</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>validation_freqs</td>
+<td>验证频率</td>
+<td align="center">int</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>early_stopping_rounds</td>
+<td>第几轮进行早停</td>
+<td align="center">int</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>use_missing</td>
+<td>是否使用缺失值</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>zero_as_missing</td>
+<td>是否将0作为缺失值</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>complete_secure</td>
+<td>是否完全安全</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>tree_num_per_party</td>
+<td>每一方树数量</td>
+<td align="center">int</td>
+<td align="center">1</td>
+<td>1 ~ 100</td>
+<td></td>
+</tr>
+<tr>
+<td>guest_depth</td>
+<td>guest方树深度</td>
+<td align="center">int</td>
+<td align="center">1</td>
+<td>1 ~ 100</td>
+<td>(当work_mode是layered的时候，guest_depth参数生效)</td>
+</tr>
+<tr>
+<td>host_depth</td>
+<td>host方树深度</td>
+<td align="center">int</td>
+<td align="center">1</td>
+<td>1 ~ 100</td>
+<td>(当work_mode是layered的时候，host_depth参数生效)</td>
+</tr>
+<tr>
+<td>work_mode</td>
+<td>工作模式</td>
+<td align="center">str</td>
+<td align="center">"mix"</td>
+<td>"mix", "layered"</td>
+<td></td>
+</tr>
+<tr>
+<td>metrics</td>
+<td>评价指标</td>
+<td align="center">str</td>
+<td align="center">None</td>
+<td>"regression", "root_mean_squared_error", "mean_absolute_error", "binary-classification", "auc", "ks", "multi-classification", "accuracy", "precision", "recall"</td>
+<td></td>
+</tr>
+<tr>
+<td>sparse_optimization</td>
+<td>稀疏数据是否进行优化</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>random_seed</td>
+<td>随机数种子</td>
+<td align="center">int</td>
+<td align="center">100</td>
+<td>1 ~ 1000</td>
+<td></td>
+</tr>
+<tr>
+<td>binning_error</td>
+<td>分箱错误大小</td>
+<td align="center">float</td>
+<td align="center">0.001</td>
+<td>0 ~ 0.001</td>
+<td></td>
+</tr>
+<tr>
+<td>cipher_compress_error</td>
+<td>密文压缩错误</td>
+<td align="center">None</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>new_ver</td>
+<td>是否是new</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>run_goss</td>
+<td>是否运行goss</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>top_rate</td>
+<td>最高的比例</td>
+<td align="center">float</td>
+<td align="center">0.2</td>
+<td>0.05 ~ 0.5</td>
+<td></td>
+</tr>
+<tr>
+<td>other_rate</td>
+<td>其他比例</td>
+<td align="center">float</td>
+<td align="center">0.1</td>
+<td>0.05 ~ 0.5</td>
+<td></td>
+</tr>
+<tr>
+<td>cipher_compress</td>
+<td>密文是否压缩</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?callback_param</td>
+<td>回调参数</td>
+<td align="center">CallbackParam</td>
+<td align="center">~</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="homo-secure-boost">Homo Secure Boost</h3>
+<p>横向secureboost ,支持二分类，多分类，交叉验证，回归</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>?tree_param</td>
+<td>树参数</td>
+<td align="center">DecisionTreeParam</td>
+<td align="center">DecisionTreeParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>task_type</td>
+<td>任务类型</td>
+<td align="center">str</td>
+<td align="center">"classification"</td>
+<td>"classification", "regression"</td>
+<td></td>
+</tr>
+<tr>
+<td>?objective_param</td>
+<td>目标参数</td>
+<td align="center">ObjectiveParam</td>
+<td align="center">ObjectiveParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>learning_rate</td>
+<td>学习率</td>
+<td align="center">float</td>
+<td align="center">0.3</td>
+<td>0-1</td>
+<td></td>
+</tr>
+<tr>
+<td>num_trees</td>
+<td>树数量</td>
+<td align="center">int</td>
+<td align="center">5</td>
+<td>3 ~ 100</td>
+<td></td>
+</tr>
+<tr>
+<td>subsample_feature_rate</td>
+<td>样本采样率</td>
+<td align="center">float</td>
+<td align="center">1</td>
+<td>0 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>n_iter_no_change</td>
+<td>n次迭代是否没有变化</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>tol</td>
+<td>收敛阈值</td>
+<td align="center">float</td>
+<td align="center">0.0001</td>
+<td>0 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>bin_num</td>
+<td>分箱数量</td>
+<td align="center">int</td>
+<td align="center">32</td>
+<td>5 ~ 100</td>
+<td></td>
+</tr>
+<tr>
+<td>?predict_param</td>
+<td>预测参数</td>
+<td align="center">PredictParam</td>
+<td align="center">PredictParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?cv_param</td>
+<td>交叉验证参数</td>
+<td align="center">CrossValidationParam</td>
+<td align="center">CrossValidationParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>validattion_freqs</td>
+<td>验证频率</td>
+<td align="center">int</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>use_missing</td>
+<td>是否使用缺失值</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>zero_as_missing</td>
+<td>0是否作为缺失值</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>random_seed</td>
+<td>随机数种子</td>
+<td align="center">int</td>
+<td align="center">100</td>
+<td>10 ~ 1000</td>
+<td></td>
+</tr>
+<tr>
+<td>binning_error</td>
+<td>分桶错误</td>
+<td align="center">float</td>
+<td align="center">0.001</td>
+<td>0 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>backend</td>
+<td>后端处理方式</td>
+<td align="center">str</td>
+<td align="center">"distributed"</td>
+<td>"distributed", "memory"</td>
+<td></td>
+</tr>
+<tr>
+<td>?callback_param</td>
+<td>回调参数</td>
+<td align="center">CallbackParam</td>
+<td align="center">CallbackParam</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="hetero-nn">Hetero NN</h3>
+<p>纵向神经网络，支持多分类，check-point,早停</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>task_type</td>
+<td>任务类型</td>
+<td align="center">string</td>
+<td align="center">"classification"</td>
+<td>"classification", "regression"</td>
+<td></td>
+</tr>
+<tr>
+<td>epochs</td>
+<td>训练轮次</td>
+<td align="center">int</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>batch_size</td>
+<td>每一轮训练样本大小</td>
+<td align="center">int</td>
+<td align="center">-1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>early_stop</td>
+<td>早停判断标准</td>
+<td align="center">string</td>
+<td align="center">"diff"</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>tol</td>
+<td>收敛的阈值</td>
+<td align="center">float</td>
+<td align="center">1.00E-05</td>
+<td>0-0.1</td>
+<td></td>
+</tr>
+<tr>
+<td>?encrypt_param</td>
+<td>加密参数</td>
+<td align="center">EncryptParam</td>
+<td align="center">EncryptParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?predict_param</td>
+<td>预测参数</td>
+<td align="center">PredictParam</td>
+<td align="center">PredictParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?cv_param</td>
+<td>交叉验证参数</td>
+<td align="center">CrossValidationParam</td>
+<td align="center">CrossValidationParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>interactive_layer_lr</td>
+<td>隐藏层学习率</td>
+<td align="center">float</td>
+<td align="center">0.1</td>
+<td>0 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>validation_freqs</td>
+<td>验证频率</td>
+<td align="center">int</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>early_stopping_rounds</td>
+<td>第几轮进行早停</td>
+<td align="center">int</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>use_first_metric_only</td>
+<td>是否用第一个指标作为评判标准</td>
+<td align="center">bool</td>
+<td align="center">?None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>floating_point_precision</td>
+<td>浮点数精确位数</td>
+<td align="center">float</td>
+<td align="center">23</td>
+<td>23</td>
+<td></td>
+</tr>
+<tr>
+<td>drop_out_keep_rate</td>
+<td>保留样本比例</td>
+<td align="center">int</td>
+<td align="center">1</td>
+<td>0 ~ 1</td>
+<td></td>
+</tr>
+<tr>
+<td>?selector_param</td>
+<td>选取器参数</td>
+<td align="center">None</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="homo-nn">Homo NN</h3>
+<p>横向神经网络，支持多分类，多layer,单layer</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>max_iter</td>
+<td>最大迭代次数</td>
+<td align="center">int</td>
+<td align="center">100</td>
+<td>10 ~ 1000</td>
+<td></td>
+</tr>
+<tr>
+<td>batch_size</td>
+<td>每一轮训练样本大小</td>
+<td align="center">int</td>
+<td align="center">-1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>secure_aggregate</td>
+<td>是否进行安全聚集</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>aggregate_every_n_epoch</td>
+<td>每训练多少轮进行一次聚集</td>
+<td align="center">int</td>
+<td align="center">1</td>
+<td>1-100</td>
+<td></td>
+</tr>
+<tr>
+<td>early_stop</td>
+<td>早停判断标准</td>
+<td align="center">str</td>
+<td align="center">"diff"</td>
+<td>?</td>
+<td></td>
+</tr>
+<tr>
+<td>encode_label</td>
+<td>是否编码</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>predict_param</td>
+<td>预测参数</td>
+<td align="center">?PredictParam</td>
+<td align="center">PredictParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?kwargs</td>
+<td>隐含参数</td>
+<td align="center">JSON</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>?cv_param</td>
+<td>交叉验证参数</td>
+<td align="center">CrossValidationParam</td>
+<td align="center">CrossValidationParam</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="hetero-k-means">Hetero K-means</h3>
+<p>基于多host,基于特征工程进行聚类</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>k</td>
+<td>聚类数量</td>
+<td align="center">int</td>
+<td align="center">5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>max_iter</td>
+<td>最大迭代次数</td>
+<td align="center">int</td>
+<td align="center">300</td>
+<td>100 ~ 1000</td>
+<td></td>
+</tr>
+<tr>
+<td>tol</td>
+<td>损失大小</td>
+<td align="center">float</td>
+<td align="center">0.001</td>
+<td>0 ~ 0.001</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="hetero-federated-transfer-learning">Hetero Federated Transfer Learning</h3>
+<h2 id="model-evaluation">Model Evaluation</h2>
+<h3 id="evaluation">Evaluation</h3>
+<p>模型评估</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eval_type 评估类型</td>
+<td>str</td>
+<td align="center">"binary"</td>
+<td align="center">"binary", "regression", "multiclass"</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>unfold_multi_result</td>
+<td>是否显示所有的结果</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>metrics</td>
+<td>评估指标</td>
+<td align="center">str/list</td>
+<td align="center">None</td>
+<td></td>
+<td>??评估之后指标??</td>
+</tr>
+<tr>
+<td>run_clustering_arbiter_metric</td>
+<td>是否是运行聚类第三方评价</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>pos_label</td>
+<td>指定正样本的标签</td>
+<td align="center">int/float/str</td>
+<td align="center">1</td>
+<td>0/1</td>
+<td></td>
+</tr>
+<tr>
+<td>need_run</td>
+<td>是否需要运行</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="psi">PSI</h3>
+<p>psi计算</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>max_bin_num</td>
+<td>最大分桶数量</td>
+<td align="center">int</td>
+<td align="center">20</td>
+<td>10 ~ 100</td>
+<td></td>
+</tr>
+<tr>
+<td>need_run</td>
+<td>是否需要运行</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>dense_missing_val</td>
+<td>稠密缺失值</td>
+<td align="center">?None</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="application">Application</h2>
+<h3 id="score-card">Score Card</h3>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>method</td>
+<td>方式</td>
+<td align="center">str</td>
+<td align="center">credit</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>offset</td>
+<td>基准分</td>
+<td align="center">int</td>
+<td align="center">400-1000</td>
+<td>500</td>
+<td></td>
+</tr>
+<tr>
+<td>factor</td>
+<td>分数步长</td>
+<td align="center">int</td>
+<td align="center">10-100</td>
+<td>20</td>
+<td></td>
+</tr>
+<tr>
+<td>factor_base</td>
+<td>因子基数</td>
+<td align="center">int</td>
+<td align="center">2-30</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>upper_limit_ratio</td>
+<td>上限比例</td>
+<td align="center">int/float</td>
+<td align="center">2-100</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td>lower_limit_value</td>
+<td>下限值</td>
+<td align="center">int/float</td>
+<td align="center">0</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>need_run</td>
+<td>是否需要运行</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="mpc">MPC</h2>
+<h3 id="secure-information-retrieval">Secure Information Retrieval</h3>
+<p>信息检束PIR</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>security_level</td>
+<td>安全等级</td>
+<td align="center">float</td>
+<td align="center">0.5</td>
+<td>0.1-1</td>
+<td></td>
+</tr>
+<tr>
+<td>oblivious_transfer_protocol</td>
+<td>不经意传输协议</td>
+<td align="center">str</td>
+<td align="center">"OT_Hauck"</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>commutative_encryption</td>
+<td>可交换加密</td>
+<td align="center">?CommutativeEncryptedPohligHellman</td>
+<td align="center">CommutativeEncryptedPohligHellman</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>non_committing_encryption</td>
+<td>非加密</td>
+<td align="center">str</td>
+<td align="center">"aes"</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>dh_params</td>
+<td>Pohlig_Hellman加密参数</td>
+<td align="center">?DHParam</td>
+<td align="center">DHParam</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>key_size</td>
+<td>交换密文长度</td>
+<td align="center">int</td>
+<td align="center">1024</td>
+<td>1024 ~ 4096</td>
+<td></td>
+</tr>
+<tr>
+<td>raw_retrieval</td>
+<td>是否进行明文检索</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>target_cols</td>
+<td>需要检索的列</td>
+<td align="center">str/list</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="feldman-verifiable-sum">Feldman Verifiable Sum</h3>
+<h2 id="other">Other</h2>
+<h3 id="cross-validation">Cross Validation</h3>
+<p>交叉验证</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n_splits</td>
+<td>分片数量</td>
+<td align="center">int</td>
+<td align="center">5</td>
+<td>3 ~ 100</td>
+<td></td>
+</tr>
+<tr>
+<td>mode</td>
+<td>模式</td>
+<td align="center">str</td>
+<td align="center">?"Hetero"</td>
+<td>"hetero", "homo"</td>
+<td></td>
+</tr>
+<tr>
+<td>role</td>
+<td>当前方角色</td>
+<td align="center">str</td>
+<td align="center">"Guest"</td>
+<td>"Guest", "Host", "Arbiter"</td>
+<td></td>
+</tr>
+<tr>
+<td>shuffle</td>
+<td>是否排序</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>random_seed</td>
+<td>随机数种子</td>
+<td align="center">int</td>
+<td align="center">1</td>
+<td>1 ~ 1000</td>
+<td></td>
+</tr>
+<tr>
+<td>need_cv</td>
+<td>组件是否需要运行</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>output_fold_history</td>
+<td>是否输出交叉验证历史</td>
+<td align="center">bool</td>
+<td align="center">True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>history_value_type</td>
+<td>历史值类型</td>
+<td align="center">str</td>
+<td align="center">"score"</td>
+<td>"score", "instance"</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="hetero-step-wise">Hetero Step Wise</h3>
+<p>纵向,linr,lr,poisson支持stepwise特征选取</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>?基本模型训练参数</td>
+<td>同模型训练参数</td>
+<td align="center">参考各基本模型训练参数</td>
+<td align="center">同各个模型训练参数</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>score_name</td>
+<td>评判标准</td>
+<td align="center">str</td>
+<td align="center">"AIC"</td>
+<td>"AIC", "BIC"</td>
+<td></td>
+</tr>
+<tr>
+<td>mode</td>
+<td>模式</td>
+<td align="center">str</td>
+<td align="center">?"hetero"</td>
+<td>"Hetero", "Homo"</td>
+<td></td>
+</tr>
+<tr>
+<td>role</td>
+<td>角色</td>
+<td align="center">str</td>
+<td align="center">"guest"</td>
+<td>"Guest", "Host", "Aribiter"</td>
+<td></td>
+</tr>
+<tr>
+<td>direction</td>
+<td>方向</td>
+<td align="center">str</td>
+<td align="center">"both"</td>
+<td>"both", "forward", "backward"</td>
+<td></td>
+</tr>
+<tr>
+<td>max_step</td>
+<td>最大步数</td>
+<td align="center">int</td>
+<td align="center">10</td>
+<td>2 ~ 100</td>
+<td></td>
+</tr>
+<tr>
+<td>nvmin</td>
+<td>模型最终的最小特征数</td>
+<td align="center">int</td>
+<td align="center">2</td>
+<td>2 ~ 100</td>
+<td></td>
+</tr>
+<tr>
+<td>nvmax</td>
+<td>模型最终的最大特征数</td>
+<td align="center">int</td>
+<td align="center">None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>need_stepwise</td>
+<td>是否需要进行特征筛选</td>
+<td align="center">bool</td>
+<td align="center">False</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Copyright 2022 Seceum Co., Ltd. | All Rights Reserved.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.tracking", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.092fa1f6.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5a9542cf.min.js"></script>
+      
+    
+  </body>
+</html>
