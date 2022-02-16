@@ -59,11 +59,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#_1" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -263,6 +258,8 @@
         
           
             
+          
+        
           
         
           
@@ -485,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../preprocess/missiong.md" class="md-nav__link">
+      <a href="../preprocess/missing/" class="md-nav__link">
         缺失值
       </a>
     </li>
@@ -1061,6 +1058,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../log/" class="md-nav__link">
+        Log
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1580,37 +1591,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    数据拆分
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -1619,53 +1599,7 @@
 
   <h1>介绍</h1>
 
-<h2 id="_1">数据拆分</h2>
-<p>参数列表</p>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>含义</th>
-<th>类型</th>
-<th>约束</th>
-<th>默认值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>随机数种子</td>
-<td></td>
-<td>int</td>
-<td>int32</td>
-<td>none</td>
-</tr>
-<tr>
-<td>拆分比 - 训练集</td>
-<td></td>
-<td>float</td>
-<td>0.0 ~ 1.0</td>
-<td>0.8</td>
-</tr>
-<tr>
-<td>拆分比 - 测试集</td>
-<td></td>
-<td>float</td>
-<td>0.0 ~ 1.0</td>
-<td>0.0</td>
-</tr>
-<tr>
-<td>拆分比 - 验证集</td>
-<td></td>
-<td>float</td>
-<td>0.0 ~ 1.0</td>
-<td>0.2</td>
-</tr>
-</tbody>
-</table>
-<p>样本权重建议添加新的组件，因为标签的个数不确定，对应的输入框数量会发生变化，如果放在此处会增加页面的复杂性</p>
-<p>federatedml/param/data_split_param.py
-federatedml/components/hetero_data_split.py
-federatedml/components/homo_data_split.py</p>
+
 
               
             </article>

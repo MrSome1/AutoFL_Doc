@@ -279,6 +279,8 @@
         
           
         
+          
+        
       
       
         
@@ -483,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ui_component/preprocess/missiong.md" class="md-nav__link">
+      <a href="../../../ui_component/preprocess/missing/" class="md-nav__link">
         缺失值
       </a>
     </li>
@@ -1052,6 +1054,20 @@
           
         </ul>
       </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ui_component/log/" class="md-nav__link">
+        Log
+      </a>
     </li>
   
 
@@ -1795,7 +1811,7 @@
 <td>alpha系数</td>
 <td align="center">float</td>
 <td align="center">1</td>
-<td>0.1 ~ 1</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -1811,27 +1827,27 @@
 <td>批处理大小</td>
 <td align="center">int</td>
 <td align="center">-1</td>
-<td></td>
-<td></td>
+<td>[10, ]</td>
+<td>-1表示不使用mini batch</td>
 </tr>
 <tr>
 <td>learning_rate</td>
 <td>学习率</td>
 <td align="center">float</td>
 <td align="center">0.01</td>
-<td>0.01 ~ 0.1</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
 <td>max_iter</td>
 <td>最大迭代次数</td>
 <td align="center">int</td>
-<td align="center">20</td>
-<td>2 ~ 100</td>
+<td align="center">100</td>
+<td>[1, +inf]</td>
 <td></td>
 </tr>
 <tr>
-<td>?init_param</td>
+<td>init_param</td>
 <td>初始化参数</td>
 <td align="center">InitParam</td>
 <td align="center">InitParam</td>
@@ -1839,7 +1855,7 @@
 <td></td>
 </tr>
 <tr>
-<td>?predict_param</td>
+<td>predict_param</td>
 <td>预测参数</td>
 <td align="center">PredictParam</td>
 <td align="center">PredictParam</td>
@@ -1847,7 +1863,7 @@
 <td></td>
 </tr>
 <tr>
-<td>?encrypt_param</td>
+<td>encrypt_param</td>
 <td>加密参数</td>
 <td align="center">EncryptParam</td>
 <td align="center">EncryptParam</td>
@@ -1855,7 +1871,7 @@
 <td></td>
 </tr>
 <tr>
-<td>?encrypted_mode_calculator_param</td>
+<td>encrypted_mode_calculator_param</td>
 <td>加密模式计算参数</td>
 <td align="center">EncryptedModeCalculatorParam</td>
 <td align="center">EncryptedModeCalculatorParam</td>
@@ -1863,7 +1879,7 @@
 <td></td>
 </tr>
 <tr>
-<td>?cv_param</td>
+<td>cv_param</td>
 <td>交叉验证参数</td>
 <td align="center">CrossValidationParam</td>
 <td align="center">CrossValidationParam</td>
@@ -1927,7 +1943,7 @@
 <td></td>
 </tr>
 <tr>
-<td>?callback_param</td>
+<td>callback_param</td>
 <td>回调参数</td>
 <td align="center">CallbackParam</td>
 <td align="center">CallbackParam</td>
@@ -1974,7 +1990,7 @@
 <td>收敛阈值</td>
 <td align="center">float</td>
 <td align="center">1e-4</td>
-<td>?0 ~ 0.0001</td>
+<td></td>
 <td>?</td>
 </tr>
 <tr>

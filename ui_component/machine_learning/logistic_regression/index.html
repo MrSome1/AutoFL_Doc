@@ -281,6 +281,8 @@
         
           
         
+          
+        
       
       
         
@@ -485,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../preprocess/missiong.md" class="md-nav__link">
+      <a href="../../preprocess/missing/" class="md-nav__link">
         缺失值
       </a>
     </li>
@@ -894,8 +896,6 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           逻辑回归
@@ -912,8 +912,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -922,27 +920,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    操作
+  <a href="#_1" class="md-nav__link">
+    功能
   </a>
-  
-    <nav class="md-nav" aria-label="操作">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    更多
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
+    操作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     报告
   </a>
   
@@ -1117,6 +1109,20 @@
           
         </ul>
       </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../log/" class="md-nav__link">
+        Log
+      </a>
     </li>
   
 
@@ -1651,8 +1657,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1661,27 +1665,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    操作
+  <a href="#_1" class="md-nav__link">
+    功能
   </a>
-  
-    <nav class="md-nav" aria-label="操作">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    更多
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
+    操作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     报告
   </a>
   
@@ -1700,18 +1698,21 @@
               
                 
 
-<h1 id="_1">纵向</h1>
-<h2 id="_2">操作</h2>
-<p><strong>数据拆分</strong></p>
-<p>见<a href="../../preprocess/data_split/">数据拆分参数</a></p>
-<p><strong>算法参数</strong></p>
+  <h1>逻辑回归</h1>
+
+<h2 id="_1"><strong>功能</strong></h2>
+<p>联邦逻辑回归算法</p>
+<hr />
+<h2 id="_2"><strong>操作</strong></h2>
+<p><strong>1 数据拆分</strong></p>
+<p>见<a href="../../preprocess/data_split/">数据拆分</a>  </p>
+<p><strong>2 算法参数</strong></p>
 <table>
 <thead>
 <tr>
 <th>名称</th>
 <th>含义</th>
 <th align="center">类型</th>
-<th align="center">必要</th>
 <th>默认值</th>
 <th>约束</th>
 <th>说明</th>
@@ -1720,41 +1721,37 @@
 <tbody>
 <tr>
 <td>max_iter</td>
-<td>最大迭代次数</td>
+<td>最大训练轮次</td>
 <td align="center">int</td>
-<td align="center">20</td>
-<td>2 ~ 100</td>
-<td></td>
+<td>100</td>
+<td>[1, ]</td>
 <td></td>
 </tr>
 <tr>
 <td>batch_size</td>
-<td>批处理大小</td>
+<td>批处理样本量</td>
 <td align="center">int</td>
-<td align="center">-1</td>
-<td></td>
-<td></td>
-<td></td>
+<td>0❗</td>
+<td>[0, ]❗</td>
+<td>小于10则不开启批处理模式; 超过样本数量后等效于0</td>
 </tr>
 <tr>
 <td>learning_rate</td>
 <td>学习率</td>
 <td align="center">float</td>
-<td align="center">0.01</td>
-<td>0.01 ~ 0.1</td>
-<td></td>
+<td>0.01</td>
+<td>(0.0, ]</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<h4 id="_3">更多</h4>
+<p><strong>3 更多参数</strong></p>
 <table>
 <thead>
 <tr>
 <th>名称</th>
 <th>含义</th>
 <th align="center">类型</th>
-<th align="center">必要</th>
 <th>默认值</th>
 <th>约束</th>
 <th>说明</th>
@@ -1762,74 +1759,104 @@
 </thead>
 <tbody>
 <tr>
+<td>threshold</td>
+<td>预测阈值</td>
+<td align="center">float</td>
+<td>0.5</td>
+<td>[0.0, 1.0]</td>
+<td>预测值大于该值时则认为样本属于该类别</td>
+</tr>
+<tr>
 <td>optimizer</td>
-<td></td>
+<td>优化方式</td>
 <td align="center">str</td>
-<td align="center">"rmsprop", "sgd", "adam", "nesterov_momentum_sgd", "sqn", "adagrad"</td>
-<td>0.2</td>
-<td></td>
+<td>"rmsprop"</td>
+<td>"rmsprop", "sgd", "adam", "adagrad"❗</td>
 <td></td>
 </tr>
 <tr>
 <td>decay</td>
-<td></td>
+<td>学习率衰减率</td>
 <td align="center">float</td>
-<td align="center">0.0 ~ 1.0</td>
-<td>0.2</td>
+<td>1.0</td>
 <td></td>
-<td></td>
+<td>lr=lr0/(1+decay*t)</td>
 </tr>
 <tr>
 <td>decay_sqrt</td>
+<td>是否使用衰减率的平方根</td>
+<td align="center">bool</td>
+<td>true</td>
 <td></td>
-<td align="center">float</td>
-<td align="center">0.0 ~ 1.0</td>
-<td>0.2</td>
-<td></td>
-<td></td>
+<td>此项为true时, lr=lr0/sqrt(1+decay*t)</td>
 </tr>
 <tr>
 <td>penalty</td>
-<td></td>
-<td align="center">float</td>
-<td align="center">0.0 ~ 1.0</td>
-<td>0.2</td>
-<td></td>
-<td></td>
+<td>正则化方式</td>
+<td align="center">str</td>
+<td>"L2"</td>
+<td>"", "L1", "L2"</td>
+<td>空字符串""表示不使用正则化</td>
 </tr>
 <tr>
 <td>alpha</td>
-<td></td>
+<td>正则化系数</td>
 <td align="center">float</td>
-<td align="center">0.0 ~ 1.0</td>
-<td>0.2</td>
+<td>1.0</td>
 <td></td>
-<td></td>
+<td>penalty为空字符串时该参数无效</td>
 </tr>
 <tr>
 <td>early_stop</td>
-<td></td>
+<td>收敛指标</td>
+<td align="center">str</td>
+<td>"diff"</td>
+<td>"diff", "weight_diff", "abs"</td>
+<td>loss递减量，权重递减量，loss绝对值</td>
+</tr>
+<tr>
+<td>tol</td>
+<td>收敛指标阈值</td>
 <td align="center">float</td>
-<td align="center">0.0 ~ 1.0</td>
-<td>0.2</td>
+<td>1e-4</td>
+<td>(0.0, ]</td>
+<td>收敛指标小于该值后，训练过程将终止</td>
+</tr>
+</tbody>
+</table>
+<p><strong>4 其他参数</strong></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th>默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>need_cv</td>
+<td>是否交叉验证</td>
+<td align="center">bool</td>
+<td>false</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>tol</td>
-<td></td>
-<td align="center">float</td>
-<td align="center">0.0 ~ 1.0</td>
-<td>1e-4</td>
+<td>need_val❗</td>
+<td>是否样本内评估</td>
+<td align="center">bool</td>
+<td>true</td>
 <td></td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<p>早停参数待定</p>
-<h2 id="_4">报告</h2>
+<h2 id="_3"><strong>报告</strong></h2>
 <hr />
-<h1 id="_5">横向</h1>
 
               
             </article>

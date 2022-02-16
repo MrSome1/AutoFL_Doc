@@ -277,6 +277,8 @@
         
           
         
+          
+        
       
       
         
@@ -481,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../missiong.md" class="md-nav__link">
+      <a href="../missing/" class="md-nav__link">
         缺失值
       </a>
     </li>
@@ -1050,6 +1052,20 @@
           
         </ul>
       </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../log/" class="md-nav__link">
+        Log
+      </a>
     </li>
   
 
@@ -1628,8 +1644,7 @@
 <th>名称</th>
 <th>含义</th>
 <th align="center">类型</th>
-<th align="center">必要</th>
-<th>默认值</th>
+<th align="center">默认值</th>
 <th>约束</th>
 <th>说明</th>
 </tr>
@@ -1639,8 +1654,7 @@
 <td>random_seed</td>
 <td>随机数种子</td>
 <td align="center">int</td>
-<td align="center"></td>
-<td></td>
+<td align="center">0</td>
 <td></td>
 <td></td>
 </tr>
@@ -1648,19 +1662,17 @@
 <td>train_size</td>
 <td>训练集拆分比</td>
 <td align="center">float</td>
-<td align="center">✅</td>
-<td></td>
-<td></td>
-<td></td>
+<td align="center">0.8</td>
+<td>[0.0, 1.0]</td>
+<td>train_size与test_size之和应为1</td>
 </tr>
 <tr>
 <td>test_size</td>
 <td>测试集拆分比</td>
 <td align="center">float</td>
-<td align="center">✅</td>
-<td></td>
-<td></td>
-<td></td>
+<td align="center">0.2</td>
+<td>[0.0, 1.0]</td>
+<td>train_size与test_size之和应为1</td>
 </tr>
 </tbody>
 </table>

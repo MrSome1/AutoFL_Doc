@@ -59,6 +59,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -258,6 +263,8 @@
         
           
             
+          
+        
           
         
           
@@ -480,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="preprocess/missiong.md" class="md-nav__link">
+      <a href="preprocess/missing/" class="md-nav__link">
         缺失值
       </a>
     </li>
@@ -1054,6 +1061,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="log/" class="md-nav__link">
+        Log
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1573,6 +1594,37 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    符号约定
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -1581,7 +1633,172 @@
 
   <h1>概述</h1>
 
-
+<p>UI组件文档对应原型图中的模型训练，对每个分组下的每个组件进行介绍</p>
+<p>对于每个组件，说明的内容包括</p>
+<ul>
+<li><strong>功能</strong> 简要说明组件的功能</li>
+<li><strong>操作</strong> 对应原型图中组件的操作部分，介绍组件的各项参数</li>
+<li><strong>报告</strong> 对应原型图中组件的报告部分，介绍组件报告包含的内容</li>
+</ul>
+<p>UI组件的设计是在FATE组件的基础上进行的，采取了最大复用的原则。当UI组件的设定与FATE组件不一致时，文档中将使用❗进行标注，例如</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th>默认值</th>
+<th>约束</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>batch_size</td>
+<td>批处理大小</td>
+<td align="center">int</td>
+<td>0❗</td>
+<td>[0, ]❗</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_1"><strong>符号约定</strong></h2>
+<p>在声明组件参数的默认值与取值范围时，使用了如下的方式</p>
+<ul>
+<li>
+<p>未声明约束条件时，参数服从其数据类型的取值范围</p>
+<table>
+<thead>
+<tr>
+<th align="center">数据类型</th>
+<th align="center">约束</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">int</td>
+<td align="center">-2147483648 ~ 2147483647</td>
+<td align="center">int32标准</td>
+</tr>
+<tr>
+<td align="center">float</td>
+<td align="center">-3.4e38 ~ 3.4e38</td>
+<td align="center">float32标准</td>
+</tr>
+<tr>
+<td align="center">str</td>
+<td align="center">128位</td>
+<td align="center">默认长度128位❗</td>
+</tr>
+<tr>
+<td align="center">bool</td>
+<td align="center">true/false</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>对于数值型(int, float)参数, 使用了如下符号</p>
+<table>
+<thead>
+<tr>
+<th align="center">符号</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">(</td>
+<td align="center">左开区间</td>
+</tr>
+<tr>
+<td align="center">[</td>
+<td align="center">左闭区间</td>
+</tr>
+<tr>
+<td align="center">)</td>
+<td align="center">右开区间</td>
+</tr>
+<tr>
+<td align="center">]</td>
+<td align="center">右闭区间</td>
+</tr>
+<tr>
+<td align="center">e</td>
+<td align="center">科学计数法</td>
+</tr>
+</tbody>
+</table>
+<p>当左侧或右侧的限界值与数据类型的限界值相同时，则省略</p>
+</li>
+<li>
+<p>数值型参数举例</p>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th align="center">约束</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">threshold</td>
+<td align="center">float</td>
+<td align="center">0.5</td>
+<td align="center">[0.0, 1.0]</td>
+<td align="center">0 &lt;= threshold &lt;= 1</td>
+</tr>
+<tr>
+<td align="center">max_iter</td>
+<td align="center">int</td>
+<td align="center">100</td>
+<td align="center">[1, ]</td>
+<td align="center">1 &lt;= max_iter &lt;= 2147483647</td>
+</tr>
+<tr>
+<td align="center">tol</td>
+<td align="center">float</td>
+<td align="center">1e-4</td>
+<td align="center">(0, ]</td>
+<td align="center">0 &lt; tol &lt;= 3.4e38, 1e-4为0.0001的科学计数表示</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>对于字符型参数, 声明长度限制, 或可选的字符常量</p>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">类型</th>
+<th align="center">约束</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">name</td>
+<td align="center">str</td>
+<td align="center">128位</td>
+<td align="center">长度限制为128位</td>
+</tr>
+<tr>
+<td align="center">penalty</td>
+<td align="center">str</td>
+<td align="center">"L1", "L2"</td>
+<td align="center">"L1"或"L2"</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<hr />
 
               
             </article>
