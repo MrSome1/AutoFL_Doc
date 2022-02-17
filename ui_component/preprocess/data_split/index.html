@@ -1614,13 +1614,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    问题
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1637,7 +1630,7 @@
   <h1>Data split</h1>
 
 <h2 id="_1">数据拆分</h2>
-<p><strong>参数列表</strong></p>
+<p><strong>拆分参数</strong></p>
 <table>
 <thead>
 <tr>
@@ -1676,12 +1669,39 @@
 </tr>
 </tbody>
 </table>
+<p><strong>权重参数</strong></p>
+<p>如果学习算法组件支持<a href="../../machine_learning/">分类任务</a>, 则需要以下参数</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>need_sample_weight</td>
+<td>是否使用样本权重</td>
+<td align="center">bool</td>
+<td align="center">false</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>sample_weight</td>
+<td>标签类别对应的权重值</td>
+<td align="center">dict{str: float}</td>
+<td align="center"></td>
+<td></td>
+<td>字典中的每一项含义是 {标签类别名称: 样本权重值}</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2 id="_2">问题</h2>
-<p>2022.02.15</p>
-<ul>
-<li>建议去掉样本权重相关的参数，因为标签的类别数量是不确定的，会增加页面复杂度，使用采样组件是更好的选择</li>
-</ul>
 
               
             </article>

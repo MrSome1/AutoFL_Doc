@@ -476,13 +476,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    问题
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1692,13 +1685,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    问题
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1732,12 +1718,20 @@
 </thead>
 <tbody>
 <tr>
-<td>fed_name</td>
+<td>fusion_dataset_name</td>
 <td>融合样本名称</td>
 <td align="center">str</td>
 <td></td>
 <td></td>
 <td></td>
+</tr>
+<tr>
+<td>id_encoded</td>
+<td>id是否已被加密</td>
+<td align="center">bool</td>
+<td>true</td>
+<td></td>
+<td>该参数为true时，求交过程中则不再对id进行加密</td>
 </tr>
 <tr>
 <td>local_name</td>
@@ -1750,37 +1744,44 @@
 <tr>
 <td>local_id</td>
 <td>自有样本id</td>
-<td align="center">str</td>
+<td align="center">list[str]</td>
 <td></td>
-<td></td>
+<td>列表长度大于0</td>
 <td></td>
 </tr>
 <tr>
 <td>remote_name</td>
 <td>合作方样本</td>
-<td align="center">str</td>
+<td align="center">list[str]</td>
 <td></td>
-<td></td>
+<td>列表长度大于0</td>
 <td></td>
 </tr>
 <tr>
 <td>remote_id</td>
 <td>合作方样本id</td>
-<td align="center">str</td>
+<td align="center">list[str]</td>
 <td></td>
-<td></td>
+<td>列表长度大于0</td>
 <td></td>
 </tr>
 </tbody>
 </table>
+<p><strong>备注</strong></p>
+<ul>
+<li>
+<p>求交组件使用自研的算法方案，不使用FATE的Intersect组件，以上参数均不相符</p>
+</li>
+<li>
+<p>local_id、remote_name与remote_id三项参数属于求交条件，可在操作界面中添加多组</p>
+</li>
+<li>
+<p>每增加一组求交条件，以上三个参数的列表中均相应的增加一项。</p>
+</li>
+</ul>
 <hr />
 <h2 id="_3"><strong>报告</strong></h2>
 <hr />
-<h2 id="_4">问题</h2>
-<p>2022.02.15</p>
-<ul>
-<li>FATE求交组件不支持指定id列, 需要新的求交方案</li>
-</ul>
 
               
             </article>
