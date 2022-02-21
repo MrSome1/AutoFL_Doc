@@ -8,21 +8,21 @@
       
       
       
-        <link rel="canonical" href="http://localhost:8000/fate_component/machine_learning/">
+        <link rel="canonical" href="http://localhost:8000/machine_learning/evaluation/metrics/">
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.11">
     
     
       
-        <title>Machine learning - AutoFL</title>
+        <title>评估指标 - AutoFL</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.50e68009.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50e68009.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
@@ -36,7 +36,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -59,6 +59,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -69,7 +74,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="AutoFL" class="md-header__button md-logo" aria-label="AutoFL" data-md-component="logo">
+    <a href="../../.." title="AutoFL" class="md-header__button md-logo" aria-label="AutoFL" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -88,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Machine learning
+              评估指标
             
           </span>
         </div>
@@ -151,10 +156,28 @@
 
 
   <li class="md-tabs__item">
-    <a href="../.." class="md-tabs__link">
+    <a href="../../.." class="md-tabs__link">
       首页
     </a>
   </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
+        机器学习
+      </a>
+    </li>
+  
 
       
         
@@ -166,7 +189,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../ui_component/" class="md-tabs__link">
+      <a href="../../../ui_component/" class="md-tabs__link">
         UI组件
       </a>
     </li>
@@ -182,7 +205,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link">
+      <a href="../../../fate_component/" class="md-tabs__link">
         FATE组件
       </a>
     </li>
@@ -210,7 +233,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="AutoFL" class="md-nav__button md-logo" aria-label="AutoFL" data-md-component="logo">
+    <a href="../../.." title="AutoFL" class="md-nav__button md-logo" aria-label="AutoFL" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -229,7 +252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         首页
       </a>
     </li>
@@ -242,12 +265,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -258,28 +283,12 @@
         
           
         
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../ui_component/">UI组件</a>
+          <a href="../../">机器学习</a>
           
             <label for="__nav_2">
               <span class="md-nav__icon md-icon"></span>
@@ -287,10 +296,10 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="UI组件" data-md-level="1">
+      <nav class="md-nav" aria-label="机器学习" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          UI组件
+          机器学习
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -300,523 +309,20 @@
               
   
   
-  
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_2_2">
-          数据样本
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="数据样本" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_2">
-          <span class="md-nav__icon md-icon"></span>
-          数据样本
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/dataset_source/local/" class="md-nav__link">
-        自有样本
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/dataset_source/remote/" class="md-nav__link">
-        合作方样本
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/dataset_source/federated/" class="md-nav__link">
-        融合样本
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
-      
-      
-      
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_2_3">
-          数据融合
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="数据融合" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_3">
-          <span class="md-nav__icon md-icon"></span>
-          数据融合
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/dataset_option/intersection/" class="md-nav__link">
-        求交
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_2_4">
-          数据预处理
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="数据预处理" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_4">
-          <span class="md-nav__icon md-icon"></span>
-          数据预处理
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/preprocess/missing/" class="md-nav__link">
-        缺失值
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/preprocess/outlier/" class="md-nav__link">
-        异常值
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/preprocess/standardization/" class="md-nav__link">
-        标准化
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/preprocess/normalization/" class="md-nav__link">
-        归一化
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/preprocess/encoder/" class="md-nav__link">
-        编码与哑变量
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/preprocess/sampling/" class="md-nav__link">
-        采样
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/preprocess/statistic/" class="md-nav__link">
-        样本分析
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_2_5">
-          特征分箱
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="特征分箱" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_5">
-          <span class="md-nav__icon md-icon"></span>
-          特征分箱
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/feature_binning/frequency/" class="md-nav__link">
-        等频分箱
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/feature_binning/distance/" class="md-nav__link">
-        等距分箱
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/feature_binning/chi2/" class="md-nav__link">
-        卡方分箱
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_2_6">
-          特征选择
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="特征选择" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_6">
-          <span class="md-nav__icon md-icon"></span>
-          特征选择
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/feature_selection/pearson/" class="md-nav__link">
-        皮尔逊
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/feature_selection/iv/" class="md-nav__link">
-        IV过滤
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/feature_selection/vif/" class="md-nav__link">
-        VIF过滤
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/feature_selection/variance/" class="md-nav__link">
-        方差过滤
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/feature_selection/embedding/" class="md-nav__link">
-        嵌入法
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/feature_selection/packaging/" class="md-nav__link">
-        包装法
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
       
       
       
         
           
             
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
           
         
           
@@ -828,208 +334,94 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../ui_component/machine_learning/">学习算法</a>
+          <a href="../">模型评估</a>
           
-            <label for="__nav_2_7">
+            <label for="__nav_2_2">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" aria-label="学习算法" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_7">
-          <span class="md-nav__icon md-icon"></span>
-          学习算法
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/machine_learning/kmeans/" class="md-nav__link">
-        K-means
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/machine_learning/linear_regression/" class="md-nav__link">
-        线性回归
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/machine_learning/logistic_regression/" class="md-nav__link">
-        逻辑回归
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/machine_learning/poisson/" class="md-nav__link">
-        泊松回归
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/machine_learning/secure_boost/" class="md-nav__link">
-        SecureBoost
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/machine_learning/lightgbm/" class="md-nav__link">
-        LightGBM
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/machine_learning/neural_network/" class="md-nav__link">
-        NN
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_8" type="checkbox" id="__nav_2_8" >
-      
-      
-      
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_2_8">
-          场景算法
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="场景算法" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_8">
-          <span class="md-nav__icon md-icon"></span>
-          场景算法
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/application/score_card/" class="md-nav__link">
-        评分卡
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_9" type="checkbox" id="__nav_2_9" >
-      
-      
-      
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_2_9">
-          模型评估
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <nav class="md-nav" aria-label="模型评估" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_9">
+        <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
           模型评估
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          评估指标
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        评估指标
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    二分类
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    多分类
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    回归
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    聚类
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
           
             
               
@@ -1037,8 +429,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ui_component/machine_learning/evaluation/" class="md-nav__link">
-        模型评估
+      <a href="../graph/" class="md-nav__link">
+        评估图表
       </a>
     </li>
   
@@ -1047,20 +439,6 @@
           
         </ul>
       </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ui_component/log/" class="md-nav__link">
-        Log
-      </a>
     </li>
   
 
@@ -1110,14 +488,12 @@
         
           
         
-          
-        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">FATE组件</a>
+          <a href="../../../ui_component/">UI组件</a>
           
             <label for="__nav_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1125,10 +501,10 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="FATE组件" data-md-level="1">
+      <nav class="md-nav" aria-label="UI组件" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          FATE组件
+          UI组件
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1139,9 +515,43 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          数据样本
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数据样本" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          数据样本
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../dataset_source/" class="md-nav__link">
-        数据样本
+      <a href="../../../ui_component/dataset_source/local/" class="md-nav__link">
+        自有样本
       </a>
     </li>
   
@@ -1154,9 +564,81 @@
   
   
     <li class="md-nav__item">
-      <a href="../dataset_option/" class="md-nav__link">
-        数据融合
+      <a href="../../../ui_component/dataset_source/remote/" class="md-nav__link">
+        合作方样本
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ui_component/dataset_source/federated/" class="md-nav__link">
+        融合样本
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          数据融合
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数据融合" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          数据融合
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ui_component/dataset_option/intersection/" class="md-nav__link">
+        求交
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1175,8 +657,6 @@
       
       
       
-        
-          
         
           
         
@@ -1212,8 +692,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../preprocess/dataset_split/" class="md-nav__link">
-        数据集划分
+      <a href="../../../ui_component/preprocess/missing/" class="md-nav__link">
+        缺失值
       </a>
     </li>
   
@@ -1226,8 +706,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../preprocess/column_expand/" class="md-nav__link">
-        列扩充
+      <a href="../../../ui_component/preprocess/outlier/" class="md-nav__link">
+        异常值
       </a>
     </li>
   
@@ -1240,8 +720,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../preprocess/imputation/" class="md-nav__link">
-        异常处理
+      <a href="../../../ui_component/preprocess/standardization/" class="md-nav__link">
+        标准化
       </a>
     </li>
   
@@ -1254,8 +734,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../preprocess/scale/" class="md-nav__link">
-        尺度调整
+      <a href="../../../ui_component/preprocess/normalization/" class="md-nav__link">
+        归一化
       </a>
     </li>
   
@@ -1268,8 +748,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../preprocess/sampling/" class="md-nav__link">
-        样本采样
+      <a href="../../../ui_component/preprocess/encoder/" class="md-nav__link">
+        编码与哑变量
       </a>
     </li>
   
@@ -1282,8 +762,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../preprocess/sample_weight/" class="md-nav__link">
-        样本权重
+      <a href="../../../ui_component/preprocess/sampling/" class="md-nav__link">
+        采样
       </a>
     </li>
   
@@ -1296,22 +776,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../preprocess/encoder/" class="md-nav__link">
-        编码
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../preprocess/statistics/" class="md-nav__link">
-        数据统计
+      <a href="../../../ui_component/preprocess/statistic/" class="md-nav__link">
+        样本分析
       </a>
     </li>
   
@@ -1330,9 +796,43 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_5">
+          特征分箱
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="特征分箱" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          特征分箱
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../feature_binning/" class="md-nav__link">
-        特征分箱
+      <a href="../../../ui_component/feature_binning/frequency/" class="md-nav__link">
+        等频分箱
       </a>
     </li>
   
@@ -1345,9 +845,161 @@
   
   
     <li class="md-nav__item">
-      <a href="../feature_selection/" class="md-nav__link">
-        特征选择
+      <a href="../../../ui_component/feature_binning/distance/" class="md-nav__link">
+        等距分箱
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ui_component/feature_binning/chi2/" class="md-nav__link">
+        卡方分箱
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_6">
+          特征选择
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="特征选择" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          特征选择
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ui_component/feature_selection/pearson/" class="md-nav__link">
+        皮尔逊
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ui_component/feature_selection/iv/" class="md-nav__link">
+        IV过滤
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ui_component/feature_selection/vif/" class="md-nav__link">
+        VIF过滤
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ui_component/feature_selection/variance/" class="md-nav__link">
+        方差过滤
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ui_component/feature_selection/embedding/" class="md-nav__link">
+        嵌入法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ui_component/feature_selection/packaging/" class="md-nav__link">
+        包装法
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1368,6 +1020,8 @@
       
         
           
+            
+          
         
           
         
@@ -1385,13 +1039,573 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_7">
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../ui_component/machine_learning/">学习算法</a>
+          
+            <label for="__nav_3_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="学习算法" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          学习算法
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ui_component/machine_learning/kmeans/" class="md-nav__link">
+        K-means
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ui_component/machine_learning/linear_regression/" class="md-nav__link">
+        线性回归
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ui_component/machine_learning/logistic_regression/" class="md-nav__link">
+        逻辑回归
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ui_component/machine_learning/poisson/" class="md-nav__link">
+        泊松回归
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ui_component/machine_learning/secure_boost/" class="md-nav__link">
+        SecureBoost
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ui_component/machine_learning/lightgbm/" class="md-nav__link">
+        LightGBM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ui_component/machine_learning/neural_network/" class="md-nav__link">
+        NN
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_8" type="checkbox" id="__nav_3_8" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_8">
+          场景算法
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="场景算法" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_8">
+          <span class="md-nav__icon md-icon"></span>
+          场景算法
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ui_component/application/score_card/" class="md-nav__link">
+        评分卡
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_9" type="checkbox" id="__nav_3_9" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_9">
+          模型评估
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="模型评估" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_9">
+          <span class="md-nav__icon md-icon"></span>
+          模型评估
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ui_component/evaluation/evaluation/" class="md-nav__link">
+        模型评估
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ui_component/log/" class="md-nav__link">
+        Log
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../fate_component/">FATE组件</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="FATE组件" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          FATE组件
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fate_component/dataset_source/" class="md-nav__link">
+        数据样本
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fate_component/dataset_option/" class="md-nav__link">
+        数据融合
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          数据预处理
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数据预处理" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          数据预处理
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fate_component/preprocess/dataset_split/" class="md-nav__link">
+        数据集划分
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fate_component/preprocess/column_expand/" class="md-nav__link">
+        列扩充
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fate_component/preprocess/imputation/" class="md-nav__link">
+        异常处理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fate_component/preprocess/scale/" class="md-nav__link">
+        尺度调整
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fate_component/preprocess/sampling/" class="md-nav__link">
+        样本采样
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fate_component/preprocess/sample_weight/" class="md-nav__link">
+        样本权重
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fate_component/preprocess/encoder/" class="md-nav__link">
+        编码
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fate_component/preprocess/statistics/" class="md-nav__link">
+        数据统计
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fate_component/feature_binning/" class="md-nav__link">
+        特征分箱
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fate_component/feature_selection/" class="md-nav__link">
+        特征选择
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7" type="checkbox" id="__nav_4_7" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_7">
           学习算法
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="学习算法" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_7">
+        <label class="md-nav__title" for="__nav_4_7">
           <span class="md-nav__icon md-icon"></span>
           学习算法
         </label>
@@ -1403,7 +1617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="modeling/" class="md-nav__link">
+      <a href="../../../fate_component/machine_learning/modeling/" class="md-nav__link">
         建模方法
       </a>
     </li>
@@ -1417,7 +1631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="optimizer/" class="md-nav__link">
+      <a href="../../../fate_component/machine_learning/optimizer/" class="md-nav__link">
         优化算法
       </a>
     </li>
@@ -1431,7 +1645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="baseline/" class="md-nav__link">
+      <a href="../../../fate_component/machine_learning/baseline/" class="md-nav__link">
         基线算法
       </a>
     </li>
@@ -1445,7 +1659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linear/" class="md-nav__link">
+      <a href="../../../fate_component/machine_learning/linear/" class="md-nav__link">
         线性模型
       </a>
     </li>
@@ -1459,7 +1673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="boosting/" class="md-nav__link">
+      <a href="../../../fate_component/machine_learning/boosting/" class="md-nav__link">
         梯度提升树
       </a>
     </li>
@@ -1473,7 +1687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="neural_network/" class="md-nav__link">
+      <a href="../../../fate_component/machine_learning/neural_network/" class="md-nav__link">
         神经网络
       </a>
     </li>
@@ -1487,7 +1701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="unsupervised/" class="md-nav__link">
+      <a href="../../../fate_component/machine_learning/unsupervised/" class="md-nav__link">
         非监督学习
       </a>
     </li>
@@ -1501,7 +1715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="transfer_learning/" class="md-nav__link">
+      <a href="../../../fate_component/machine_learning/transfer_learning/" class="md-nav__link">
         迁移学习
       </a>
     </li>
@@ -1522,7 +1736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../application/" class="md-nav__link">
+      <a href="../../../fate_component/application/" class="md-nav__link">
         场景算法
       </a>
     </li>
@@ -1536,7 +1750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../model_evaluation/" class="md-nav__link">
+      <a href="../../../fate_component/model_evaluation/" class="md-nav__link">
         模型评估
       </a>
     </li>
@@ -1550,7 +1764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../encryption/" class="md-nav__link">
+      <a href="../../../fate_component/encryption/" class="md-nav__link">
         加密算法
       </a>
     </li>
@@ -1564,7 +1778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mpc/" class="md-nav__link">
+      <a href="../../../fate_component/mpc/" class="md-nav__link">
         多方安全计算
       </a>
     </li>
@@ -1585,15 +1799,280 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    二分类
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    多分类
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    回归
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    聚类
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
 
-  <h1>Machine learning</h1>
+  <h1>评估指标</h1>
 
-
+<p>本小节将对二分类、多分类、回归以及聚类模型的评估指标进行介绍</p>
+<p>所有评估指标均以<a href="../../../ui_component/">float</a>类型表示，以下不再逐项说明，仅说明指标的值域</p>
+<h2 id="_1"><strong>二分类</strong></h2>
+<p><strong>评估指标列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>英文名称</th>
+<th align="center">英文简称</th>
+<th align="center">中文名称</th>
+<th align="center">值域</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accuracy</td>
+<td align="center">ACC</td>
+<td align="center">准确率</td>
+<td align="center">[0.0, 1.0]</td>
+<td></td>
+</tr>
+<tr>
+<td>Precision</td>
+<td align="center"></td>
+<td align="center">精确率</td>
+<td align="center">[0.0, 1.0]</td>
+<td></td>
+</tr>
+<tr>
+<td>Recall</td>
+<td align="center"></td>
+<td align="center">召回率</td>
+<td align="center">[0.0, 1.0]</td>
+<td></td>
+</tr>
+<tr>
+<td>F1 Score</td>
+<td align="center">F1</td>
+<td align="center">F1分数</td>
+<td align="center">[0.0, 1.0]</td>
+<td></td>
+</tr>
+<tr>
+<td>Area Under Curve</td>
+<td align="center">AUC</td>
+<td align="center">ROC曲线面积</td>
+<td align="center">[0.0, 1.0]</td>
+<td></td>
+</tr>
+<tr>
+<td>Kolmogorov-Smirnov</td>
+<td align="center">KS</td>
+<td align="center">区分度</td>
+<td align="center">[0.0, 1.0]</td>
+<td></td>
+</tr>
+<tr>
+<td>Lift</td>
+<td align="center"></td>
+<td align="center">提升度</td>
+<td align="center">[0.0, ]</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_2"><strong>多分类</strong></h2>
+<p><strong>评估指标列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>英文名称</th>
+<th>英文简称</th>
+<th>中文名称</th>
+<th>值域</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accuracy</td>
+<td>ACC</td>
+<td>准确率</td>
+<td>[0.0, 1.0]</td>
+<td></td>
+</tr>
+<tr>
+<td>Precision</td>
+<td></td>
+<td>精确率</td>
+<td>[0.0, 1.0]</td>
+<td></td>
+</tr>
+<tr>
+<td>Recall</td>
+<td></td>
+<td>召回率</td>
+<td>[0.0, 1.0]</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_3"><strong>回归</strong></h2>
+<p><strong>评估指标列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>英文名称</th>
+<th>英文简称</th>
+<th>中文名称</th>
+<th>值域</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coefficient of Determination</td>
+<td>R² Score</td>
+<td>可决系数</td>
+<td>[ , 1.0]</td>
+<td></td>
+</tr>
+<tr>
+<td>Explained Variance Score</td>
+<td>Explained Variance</td>
+<td>解释性方差分数</td>
+<td>[0.0, 1.0] ？</td>
+<td></td>
+</tr>
+<tr>
+<td>Mean Absolute Error</td>
+<td>MAE</td>
+<td>平均绝对误差</td>
+<td>[0.0, ]</td>
+<td></td>
+</tr>
+<tr>
+<td>Mean Squared Error</td>
+<td>MSE</td>
+<td>均方误差</td>
+<td>[0.0, ]</td>
+<td></td>
+</tr>
+<tr>
+<td>Root Mean Squared Error</td>
+<td>RMSE</td>
+<td>均方根误差</td>
+<td>[0.0, ]</td>
+<td></td>
+</tr>
+<tr>
+<td>Median Absolute Error</td>
+<td>MedAE</td>
+<td>中值绝对误差</td>
+<td>[0.0, ]</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_4"><strong>聚类</strong></h2>
+<p>TODO 待整理</p>
+<p><strong>评估指标列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>英文名称</th>
+<th>英文简称</th>
+<th>中文名称</th>
+<th>值域</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jaccard Similarity Coefficient Score</td>
+<td>Jaccard Score</td>
+<td>Jaccard 相似系数</td>
+<td>[0.0, 1.0]</td>
+<td></td>
+</tr>
+<tr>
+<td>Fowlkes Mallows Score</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Adjusted Rand Score</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Davies Bouldin Index</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Distance Measure</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
 
               
             </article>
@@ -1608,6 +2087,41 @@
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: 简介" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              简介
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../graph/" class="md-footer__link md-footer__link--next" aria-label="Next: 评估图表" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              评估图表
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1633,10 +2147,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.tracking", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.092fa1f6.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.tracking", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.092fa1f6.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5a9542cf.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.5a9542cf.min.js"></script>
       
     
   </body>
