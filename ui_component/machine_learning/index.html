@@ -212,6 +212,18 @@
   
 
       
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../log/" class="md-tabs__link">
+      Log
+    </a>
+  </li>
+
+      
     </ul>
   </div>
 </nav>
@@ -281,6 +293,8 @@
         
           
         
+          
+        
       
       
         
@@ -318,7 +332,92 @@
       
         
           
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          学习算法
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="学习算法" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          学习算法
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
             
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../machine_learning/model/feature_importance/" class="md-nav__link">
+        特征重要性
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../machine_learning/model/linear_model/" class="md-nav__link">
+        线性模型
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../machine_learning/model/tree_model/" class="md-nav__link">
+        树模型
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        
+          
+            
+          
+        
           
         
           
@@ -332,14 +431,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../machine_learning/evaluation/">模型评估</a>
           
-            <label for="__nav_2_2">
+            <label for="__nav_2_3">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
       <nav class="md-nav" aria-label="模型评估" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_2">
+        <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
           模型评估
         </label>
@@ -369,6 +468,20 @@
     <li class="md-nav__item">
       <a href="../../machine_learning/evaluation/graph/" class="md-nav__link">
         评估图表
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../machine_learning/evaluation/training_and_cross_validation/" class="md-nav__link">
+        训练与交叉验证
       </a>
     </li>
   
@@ -408,8 +521,6 @@
         
           
             
-          
-        
           
         
           
@@ -1208,20 +1319,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../log/" class="md-nav__link">
-        Log
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -1734,6 +1831,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../log/" class="md-nav__link">
+        Log
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1760,7 +1872,28 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    机器学习任务
+    功能
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    功能
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    操作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    报告
   </a>
   
 </li>
@@ -1780,44 +1913,18 @@
 
   <h1>介绍</h1>
 
-<p>学习算法组件是完成机器学习任务的核心组件</p>
+<p>学习算法组件是完成机器学习任务的核心组件，用于训练与保存相应的算法模型</p>
+<p>由于学习算法组件的功能较为复杂，在介绍学习算法组件时附加了额外的说明方式，下面按组件内容依次介绍学习算法组件的</p>
+<ul>
+<li><a href="../">功能</a></li>
+<li><a href="../">操作</a></li>
+<li><a href="../">报告</a></li>
+</ul>
 <hr />
-<h2 id="_1"><strong>机器学习任务</strong></h2>
-<p>在机器学习领域中，有两种基本问题</p>
-<ul>
-<li><strong>分类</strong> 对样本的类别进行预测</li>
-<li><strong>回归</strong> 对连续型的变量进行预测</li>
-</ul>
-<p>分类问题又包括</p>
-<ul>
-<li><strong>二分类</strong> 判断样本是否属于某个类别</li>
-<li><strong>多分类</strong> 判断样本属于多个类别中的哪一个</li>
-</ul>
-<p>机器学习问题的举例</p>
-<table>
-<thead>
-<tr>
-<th align="center">实际问题</th>
-<th align="center">机器学习问题</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">预测某款产品下一个季度的销量</td>
-<td align="center">回归问题</td>
-</tr>
-<tr>
-<td align="center">判断一个贷款人是否会违约</td>
-<td align="center">二分类问题</td>
-</tr>
-<tr>
-<td align="center">判断一个手写的字符是哪个汉字</td>
-<td align="center">多分类问题</td>
-</tr>
-</tbody>
-</table>
-<p>在对学习算法组件的介绍中，将在功能介绍中说明该算法支持的问题类型，例如</p>
-<p><strong>功能</strong></p>
+<h2 id="_1"><strong>功能</strong></h2>
+<p>由于每个机器学习算法适用于不同的<a href="../../machine_learning/">机器学习问题</a>，在学习算法组件的功能介绍中, 增加了该算法支持的问题类型，例如</p>
+<blockquote>
+<h2 id="_2"><strong>功能</strong></h2>
 <p>逻辑回归算法</p>
 <p><strong>支持任务</strong></p>
 <table>
@@ -1838,6 +1945,27 @@
 </tr>
 </tbody>
 </table>
+</blockquote>
+<hr />
+<h2 id="_3"><strong>操作</strong></h2>
+<p>机器学习算法的相关参数众多，因此在学习算法组件的操作部分，对这些参数进行了分组，包括</p>
+<ul>
+<li><strong>数据拆分</strong> 与数据集拆分相关的参数</li>
+<li><strong>算法参数</strong> 训练模型时所需要的基本参数，仅确定这些参数就可以尝试进行训练</li>
+<li><strong>更多参数</strong> 训练模型的更多可选参数，适用于对算法十分了解的高级建模人员</li>
+<li><strong>其他参数</strong> 包括交叉验证、模型评估等其他可选项</li>
+</ul>
+<hr />
+<h2 id="_4"><strong>报告</strong></h2>
+<p>学习算法组件的报告内容较多，总体上可以分为四个部分</p>
+<ul>
+<li><strong>模型预览</strong> 通过图表的形式展现训练所得的模型</li>
+<li><strong>特征重要性</strong> 通过图表的形式说明训练数据集中各项特征在模型训练过程中的重要程度</li>
+<li><strong>损失函数</strong> 以曲线的形式展示训练过程中模型损失函数的走势，用以判断训练过程是否有效进行</li>
+<li><strong>评估指标与图表</strong> 展示训练或交叉验证过程的<a href="../../machine_learning/evaluation/training_and_cross_validation/">评估指标与图表</a></li>
+</ul>
+<p>每种学习算法组件之间有很大差异，在模型的自身结构、支持的机器学习问题、联邦模式下的计算规则等方面均不同，同时还考虑到是否进行了交叉验证，因此学习算法组件的报告十分繁琐，无法进行统一说明</p>
+<p>学习算法组件可能仅支持上述报告四个部分中的某几个，并且没部分内的内容也不尽相同，故将报告部分在每个算法组件内部进行具体展开说明</p>
 
               
             </article>

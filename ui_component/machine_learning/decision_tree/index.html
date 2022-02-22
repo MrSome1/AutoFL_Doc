@@ -210,6 +210,18 @@
   
 
       
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../log/" class="md-tabs__link">
+      Log
+    </a>
+  </li>
+
+      
     </ul>
   </div>
 </nav>
@@ -279,6 +291,8 @@
         
           
         
+          
+        
       
       
         
@@ -316,7 +330,92 @@
       
         
           
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          学习算法
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="学习算法" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          学习算法
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
             
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../machine_learning/model/feature_importance/" class="md-nav__link">
+        特征重要性
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../machine_learning/model/linear_model/" class="md-nav__link">
+        线性模型
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../machine_learning/model/tree_model/" class="md-nav__link">
+        树模型
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        
+          
+            
+          
+        
           
         
           
@@ -330,14 +429,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../../machine_learning/evaluation/">模型评估</a>
           
-            <label for="__nav_2_2">
+            <label for="__nav_2_3">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
       <nav class="md-nav" aria-label="模型评估" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_2">
+        <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
           模型评估
         </label>
@@ -367,6 +466,20 @@
     <li class="md-nav__item">
       <a href="../../../machine_learning/evaluation/graph/" class="md-nav__link">
         评估图表
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../machine_learning/evaluation/training_and_cross_validation/" class="md-nav__link">
+        训练与交叉验证
       </a>
     </li>
   
@@ -404,8 +517,6 @@
         
           
             
-          
-        
           
         
           
@@ -1202,20 +1313,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../log/" class="md-nav__link">
-        Log
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -1728,6 +1825,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../log/" class="md-nav__link">
+        Log
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1756,7 +1868,7 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    算法参数
+    操作
   </a>
   
 </li>
@@ -1775,105 +1887,89 @@
                 
 
 <h1 id="_1">决策树</h1>
-<h2 id="_2">算法参数</h2>
+<h2 id="_2"><strong>操作</strong></h2>
+<p><strong>算法参数</strong></p>
 <table>
 <thead>
 <tr>
 <th>名称</th>
 <th>含义</th>
-<th>类型</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
 <th>约束</th>
-<th>默认值</th>
 <th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>criterion_method</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>criterion_params</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
 <td>max_depth</td>
+<td>树的最大深度</td>
+<td align="center">int</td>
+<td align="center">3</td>
+<td>[1, ]</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>更多参数</strong></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th>约束</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>l1_coefficenct❗</td>
+<td>L1正则系数</td>
+<td align="center">float</td>
+<td align="center">0.1</td>
 <td></td>
 <td></td>
-<td></td>
+</tr>
+<tr>
+<td>l2_coefficenct❗</td>
+<td>L2正则系数</td>
+<td align="center">float</td>
+<td align="center">0.0</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td>min_sample_split</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>节点分裂所需最少样本数</td>
+<td align="center">int</td>
+<td align="center">2</td>
+<td>[1, ]❗</td>
 <td></td>
 </tr>
 <tr>
 <td>min_impurity_split</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>min_child_weight</td>
-<td></td>
-<td></td>
-<td></td>
+<td>节点分裂所需最小不纯度</td>
+<td align="center">float</td>
+<td align="center">1e-3</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td>min_leaf_node</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>叶节点最小样本数</td>
+<td align="center">int</td>
+<td align="center">1</td>
+<td>[1, ]❗</td>
+<td>某个节点上的样本数小于该值时，则认为是叶节点</td>
 </tr>
 <tr>
 <td>max_split_nodes</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>feature_importance_type</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>deterministic</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>最大节点数量</td>
+<td align="center">int</td>
+<td align="center">65536</td>
+<td>[1, ]</td>
 <td></td>
 </tr>
 </tbody>
